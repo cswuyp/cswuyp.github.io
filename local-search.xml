@@ -17,13 +17,21 @@
   
   
   <entry>
-    <title></title>
+    <title>创建博客</title>
     <link href="/2023/12/15/my-blog-build-remark/"/>
     <url>/2023/12/15/my-blog-build-remark/</url>
     
-    <content type="html"><![CDATA[<hr><h2 id="title-创建博客tags-‘hexo’-’fluid’"><a href="#title-创建博客tags-‘hexo’-’fluid’" class="headerlink" title="title:创建博客tags:[‘hexo’,’fluid’]"></a>title:创建博客<br>tags:[‘hexo’,’fluid’]</h2>]]></content>
+    <content type="html"><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>hexo</tag>
+      
+      <tag>fluid</tag>
+      
+    </tags>
     
   </entry>
   
