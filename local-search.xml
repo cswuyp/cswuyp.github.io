@@ -4,24 +4,30 @@
   
   
   <entry>
-    <title>Hello World</title>
-    <link href="/2023/12/15/hello-world/"/>
-    <url>/2023/12/15/hello-world/</url>
+    <title>解决GitHub打不开和访问慢等问题</title>
+    <link href="/2023/12/15/GitHub%E6%89%93%E4%B8%8D%E5%BC%80%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/"/>
+    <url>/2023/12/15/GitHub%E6%89%93%E4%B8%8D%E5%BC%80%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/</url>
     
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    <content type="html"><![CDATA[<h2 id="背景"><a href="#背景" class="headerlink" title="背景"></a>背景</h2><p>在家里的网络，GitHub经常打不开或者相应时间很长，这里分享一下如何解决GitHub访问慢的问题。</p><h2 id="原因"><a href="#原因" class="headerlink" title="原因"></a>原因</h2><p>GitHub访问慢本质上是我们在访问GitHub网页的时候无法通过github.com的二级域名进行域名解析。</p><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><p>手动修改设备的hosts文件，将该域名和IP的映射关系添加到设备的hosts文件中，在访问地址时会优先通过Hosts文件进行域名解析。</p><h2 id="解决步骤"><a href="#解决步骤" class="headerlink" title="解决步骤"></a>解决步骤</h2><p>1.找到github.com域名对应的IP地址，输入网址：<a href="https://tool.chinaz.com/dns/?type=1">站长工具Dns查询</a>找出最快的IP地址<br><img src="/./GitHub%E6%89%93%E4%B8%8D%E5%BC%80%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img_1.png" alt="本地路径" title="输入域名"><br><img src="/./GitHub%E6%89%93%E4%B8%8D%E5%BC%80%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/img.png" alt="本地路径" title="选取ip"></p><p>2.修改hosts，把最快的ip填入hosts</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo vim /etc/hosts<br></code></pre></td></tr></table></figure><p>3.再次执行命令刷新DNS</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">sudo killall -HUP mDNSResponder;say DNS cache has been flushed<br></code></pre></td></tr></table></figure><p>4.再次打开<a href="https://github.com/">GitHub</a>,可以访问了，大功告成</p>]]></content>
     
     
+    
+    <tags>
+      
+      <tag>GitHub</tag>
+      
+    </tags>
     
   </entry>
   
   
   
   <entry>
-    <title>创建博客</title>
+    <title>借助Hexo+GitHub Pages零成本搭建个人博客</title>
     <link href="/2023/12/15/my-blog-build-remark/"/>
     <url>/2023/12/15/my-blog-build-remark/</url>
     
-    <content type="html"><![CDATA[<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="内容"><a href="#内容" class="headerlink" title="内容"></a>内容</h3><p>test</p>]]></content>
+    <content type="html"><![CDATA[<h2 id="前期准备工作"><a href="#前期准备工作" class="headerlink" title="前期准备工作"></a>前期准备工作</h2><p>注：我的电脑是mac，后面的全部指令都是mac上操作的</p><p>1.申请GitHub账号</p><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs"><br></code></pre></td></tr></table></figure><p>2.本地安装Git<br>3.本地NodeJS</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install node<br></code></pre></td></tr></table></figure><p>3.本地安装Hexo</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure><h2 id="用Hexo生成博客项目"><a href="#用Hexo生成博客项目" class="headerlink" title="用Hexo生成博客项目"></a>用Hexo生成博客项目</h2><p>1.初始化博客</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init my-blog<br><span class="hljs-built_in">cd</span> my-blog<br>npm install<br></code></pre></td></tr></table></figure><p>2.生成网页文件&amp;本地启动</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate <span class="hljs-comment"># 生成页面，此命令可以简写为 `hexo g`</span><br>hexo server <span class="hljs-comment"># 本地启动，可简写为 `hexo s`</span><br></code></pre></td></tr></table></figure><p>通过 hexo g 生成的页面文件在项目 public 目录下;<br>使用 hexo clean 命令可以清理生成的页面文件。当配置未生效时，建议执行清理命令。</p><p>3.本地访问<br>浏览器访问：<a href="http://localhost:4000/">http://localhost:4000/</a> 会看到一个比较简陋的页面。没关系，接下来介绍如何更换主题。</p><h2 id="安装-配置主题"><a href="#安装-配置主题" class="headerlink" title="安装&amp;配置主题"></a>安装&amp;配置主题</h2><h2 id="创建文章"><a href="#创建文章" class="headerlink" title="创建文章"></a>创建文章</h2><h2 id="发布GitHub-Pages"><a href="#发布GitHub-Pages" class="headerlink" title="发布GitHub Pages"></a>发布GitHub Pages</h2><p>1.创建仓库</p>]]></content>
     
     
     
@@ -32,6 +38,19 @@
       <tag>fluid</tag>
       
     </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="/2023/12/15/hello-world/"/>
+    <url>/2023/12/15/hello-world/</url>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>]]></content>
+    
+    
     
   </entry>
   
