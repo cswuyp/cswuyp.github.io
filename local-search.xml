@@ -4,11 +4,113 @@
   
   
   <entry>
+    <title>Git常用命令和使用规范</title>
+    <link href="/2023/12/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/"/>
+    <url>/2023/12/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/</url>
+    
+    <content type="html"><![CDATA[<p>参考：</p><ol><li><a href="https://bbs.huaweicloud.com/blogs/388474">https://bbs.huaweicloud.com/blogs/388474</a></li><li><a href="https://cloud.tencent.com/developer/article/1910779">https://cloud.tencent.com/developer/article/1910779</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>后端技术</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>git</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>经典排序算法Golang实现</title>
+    <link href="/2023/12/18/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95Golang%E5%AE%9E%E7%8E%B0/"/>
+    <url>/2023/12/18/%E7%BB%8F%E5%85%B8%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95Golang%E5%AE%9E%E7%8E%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>排序</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>浅谈DFS和BFS</title>
+    <link href="/2023/12/18/%E6%B5%85%E8%B0%88DFS%E5%92%8CBFS/"/>
+    <url>/2023/12/18/%E6%B5%85%E8%B0%88DFS%E5%92%8CBFS/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>DFS</tag>
+      
+      <tag>BFS</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>浅谈动态规划</title>
+    <link href="/2023/12/18/%E6%B5%85%E8%B0%88%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    <url>/2023/12/18/%E6%B5%85%E8%B0%88%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>算法</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>动态规划</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>怎么绘制时序图</title>
     <link href="/2023/12/16/%E6%80%8E%E4%B9%88%E7%BB%98%E5%88%B6%E6%97%B6%E5%BA%8F%E5%9B%BE/"/>
     <url>/2023/12/16/%E6%80%8E%E4%B9%88%E7%BB%98%E5%88%B6%E6%97%B6%E5%BA%8F%E5%9B%BE/</url>
     
-    <content type="html"><![CDATA[<ol><li><h3 id="什么是时序图"><a href="#什么是时序图" class="headerlink" title="什么是时序图"></a>什么是时序图</h3><p>时序图(Sequence Diagram)，又名序列图、循序图，是一种UML交互图。它通过描述对象之间发送消息的时间顺序显示多个对象之间的动态协作。</p></li><li><h3 id="绘制时序图常用的工具"><a href="#绘制时序图常用的工具" class="headerlink" title="绘制时序图常用的工具"></a>绘制时序图常用的工具</h3><p>绘制时序图常用的工具有：</p><p>（1）<a href="https://www.processon.com/">processon</a>，拖拽图形作图。</p><p>优点：易上手，自由度较高。</p><p>缺点：作图效率低。</p><p>（2）MarkDown，写代码作图。</p><p>优点：会自动按照时序图规则调整图形和文字位置，作图效率高。</p><p>缺点：需要学习作图语法，有一定学习成本。</p></li><li><h3 id="时序图的元素"><a href="#时序图的元素" class="headerlink" title="时序图的元素"></a>时序图的元素</h3></li><li><h3 id="时序图语法"><a href="#时序图语法" class="headerlink" title="时序图语法"></a>时序图语法</h3></li><li><h3 id="时序图例子学习"><a href="#时序图例子学习" class="headerlink" title="时序图例子学习"></a>时序图例子学习</h3></li></ol><pre><code class=" mermaid">sequenceDiagramClient-&gt;&gt;Gateway : 发送JSON RPC请求Gateway--&gt;&gt;Client : 把JSON RPC响应发送给客户端</code></pre>]]></content>
+    <content type="html"><![CDATA[<h2 id="一、什么是时序图"><a href="#一、什么是时序图" class="headerlink" title="一、什么是时序图"></a>一、什么是时序图</h2><p>时序图(Sequence Diagram)，又名序列图、循序图，是一种UML交互图。它通过描述对象之间发送消息的时间顺序显示多个对象之间的动态协作。</p><h2 id="二、绘制时序图常用的工具"><a href="#二、绘制时序图常用的工具" class="headerlink" title="二、绘制时序图常用的工具"></a>二、绘制时序图常用的工具</h2><p>绘制时序图常用的工具有：</p><ol><li><p><a href="https://www.processon.com/">processon</a>，拖拽图形作图。</p><p>优点：易上手，自由度较高。</p><p>缺点：作图效率低。</p></li><li><p>MarkDown，写代码作图。</p><p>优点：会自动按照时序图规则调整图形和文字位置，作图效率高。</p><p>缺点：需要学习作图语法，有一定学习成本。</p></li></ol><h2 id="三、时序图组成元素"><a href="#三、时序图组成元素" class="headerlink" title="三、时序图组成元素"></a>三、时序图组成元素</h2><p>时序图中包括如下5个元素：角色、对象、生命线、控制焦点、消息。</p><ol><li><p>角色（Actor）</p><p>系统角色，可以是人、机器、其他系统、子系统</p></li><li><p>对象（Object）</p><p>（1）对象的三种命名方式</p><ul><li>第一种方式包括对象名和类名，例如：直播课时:课时，在时序图中，用“对象：类”表示；</li><li>第二种方式只显示类名，即表示它是一个匿名对象，例如： :课程；在时序图中，用“：类”表示；</li><li>第三种方式只显示对象名不显示类名，例如：讲师；在时序图中，用“对象”表示。</li></ul><p>（2）命名方式的选择</p><p>三种命名方式均可，哪种最容易让阅读该时序图的人理解，就选择哪种。</p><p>（3）对象的排列顺序</p><p>对象的左右顺序并不重要，但是为了作图清晰整洁，通常应遵循以下两个原则：把交互频繁的对象尽可能的靠拢；2.把初始化整个交互活动的对象放置在最左端。</p></li><li><p>生命线（Lifeline）</p><p>在时序图中表示为从对象图标向下延伸的一条虚线，表示对象存在的时间。</p></li><li><p>控制焦点（Focus of Control）</p><p>又称为激活期，表示时间段的符号，在这个时间段内对象将执行相应的操作。它可以被理解成C语言语义中一对花括号{ }中的内容；用小矩形表示。</p></li><li><p>消息（Message）</p><p>消息一般分为同步消息（Synchronous Message），异步消息（Asynchronous Message）和返回消息（Return Message）。</p><ul><li>消息的发送者把控制传递给消息的接收者，然后停止活动，等待消息的接收者放弃或者返回控制。用来表示同步的意义；</li><li>消息发送者通过消息把信号传递给消息的接收者，然后继续自己的活动，不等待接受者返回消息或者控制。异步消息的接收者和发送者是并发工作的。</li><li>返回消息表示从过程调用返回。</li></ul></li></ol><h2 id="四、时序图语法"><a href="#四、时序图语法" class="headerlink" title="四、时序图语法"></a>四、时序图语法</h2><h2 id="五、时序图例子学习"><a href="#五、时序图例子学习" class="headerlink" title="五、时序图例子学习"></a>五、时序图例子学习</h2><pre><code class=" mermaid">sequenceDiagramClient-&gt;&gt;Gateway : 发送JSON RPC请求Gateway--&gt;&gt;Client : 把JSON RPC响应发送给客户端</code></pre><h2 id="六、参考"><a href="#六、参考" class="headerlink" title="六、参考"></a>六、参考</h2><ol><li><a href="https://www.woshipm.com/ucd/607593.html">https://www.woshipm.com/ucd/607593.html</a></li><li><a href="https://juejin.cn/post/7038144693867118629">https://juejin.cn/post/7038144693867118629</a></li></ol>]]></content>
     
     
     <categories>
@@ -51,7 +153,7 @@
       
       <tag>分布式</tag>
       
-      <tag>Go</tag>
+      <tag>Golang</tag>
       
     </tags>
     
