@@ -4,16 +4,326 @@
   
   
   <entry>
-    <title>Git常用命令和使用规范</title>
-    <link href="/2023/12/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/"/>
-    <url>/2023/12/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/</url>
+    <title>《程序员的38堂成长课》读书笔记</title>
+    <link href="/2023/12/21/%E3%80%8A%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8438%E5%A0%82%E6%88%90%E9%95%BF%E8%AF%BE%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/21/%E3%80%8A%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%8438%E5%A0%82%E6%88%90%E9%95%BF%E8%AF%BE%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
     
-    <content type="html"><![CDATA[<p>参考：</p><ol><li><a href="https://bbs.huaweicloud.com/blogs/388474">https://bbs.huaweicloud.com/blogs/388474</a></li><li><a href="https://cloud.tencent.com/developer/article/1910779">https://cloud.tencent.com/developer/article/1910779</a></li></ol>]]></content>
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《金字塔原理》读书笔记</title>
+    <link href="/2023/12/21/%E3%80%8A%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/21/%E3%80%8A%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《设计模式之禅》读书笔记</title>
+    <link href="/2023/12/21/%E3%80%8A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%A6%85%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/21/%E3%80%8A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%A6%85%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>设计模式</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《大话设计模式》读书笔记</title>
+    <link href="/2023/12/21/%E3%80%8A%E5%A4%A7%E8%AF%9D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/21/%E3%80%8A%E5%A4%A7%E8%AF%9D%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+    <tags>
+      
+      <tag>设计模式</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《SQL必知会》读书笔记</title>
+    <link href="/2023/12/21/%E3%80%8ASQL%E5%BF%85%E7%9F%A5%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/21/%E3%80%8ASQL%E5%BF%85%E7%9F%A5%E4%BC%9A%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
     
     
     <categories>
       
-      <category>后端技术</category>
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MySQL</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《代码整洁知道：程序员的职业素养》读书笔记</title>
+    <link href="/2023/12/21/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E7%9F%A5%E9%81%93%EF%BC%9A%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E8%81%8C%E4%B8%9A%E7%B4%A0%E5%85%BB%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/21/%E3%80%8A%E4%BB%A3%E7%A0%81%E6%95%B4%E6%B4%81%E7%9F%A5%E9%81%93%EF%BC%9A%E7%A8%8B%E5%BA%8F%E5%91%98%E7%9A%84%E8%81%8C%E4%B8%9A%E7%B4%A0%E5%85%BB%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《高性能MySQL（第3版）》读书笔记</title>
+    <link href="/2023/12/21/%E3%80%8A%E9%AB%98%E6%80%A7%E8%83%BDMySQL%EF%BC%88%E7%AC%AC3%E7%89%88%EF%BC%89%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/21/%E3%80%8A%E9%AB%98%E6%80%A7%E8%83%BDMySQL%EF%BC%88%E7%AC%AC3%E7%89%88%EF%BC%89%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《操作系统导论》读书笔记</title>
+    <link href="/2023/12/21/%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/21/%E3%80%8A%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%AF%BC%E8%AE%BA%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《MySQL技术内幕InnoDB存储引擎》读书笔记</title>
+    <link href="/2023/12/21/%E3%80%8AMySQL%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95InnoDB%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/21/%E3%80%8AMySQL%E6%8A%80%E6%9C%AF%E5%86%85%E5%B9%95InnoDB%E5%AD%98%E5%82%A8%E5%BC%95%E6%93%8E%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    <categories>
+      
+      <category>读书笔记</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>MySQL</tag>
+      
+      <tag>InnoDB</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《Redis设计与实现》读书笔记</title>
+    <link href="/2023/12/21/%E3%80%8ARedis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/21/%E3%80%8ARedis%E8%AE%BE%E8%AE%A1%E4%B8%8E%E5%AE%9E%E7%8E%B0%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>《微服务设计》读书笔记</title>
+    <link href="/2023/12/20/%E3%80%8A%E5%BE%AE%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/20/%E3%80%8A%E5%BE%AE%E6%9C%8D%E5%8A%A1%E8%AE%BE%E8%AE%A1%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>go-zero学习笔记</title>
+    <link href="/2023/12/20/go-zero%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/20/go-zero%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>分布式事务及实现方案</title>
+    <link href="/2023/12/20/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88/"/>
+    <url>/2023/12/20/%E5%88%86%E5%B8%83%E5%BC%8F%E4%BA%8B%E5%8A%A1%E5%8F%8A%E5%AE%9E%E7%8E%B0%E6%96%B9%E6%A1%88/</url>
+    
+    <content type="html"><![CDATA[<p>参考：</p><ol><li><a href="https://pdai.tech/md/arch/arch-z-transection.html">https://pdai.tech/md/arch/arch-z-transection.html</a></li><li><a href="https://xiaomi-info.github.io/2020/01/02/distributed-transaction/">https://xiaomi-info.github.io/2020/01/02/distributed-transaction/</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>方案设计</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>方案设计</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>RabbitMQ学习笔记</title>
+    <link href="/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>ElasticSearch学习笔记</title>
+    <link href="/2023/12/20/ElasticSearch%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/20/ElasticSearch%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Kafka学习笔记</title>
+    <link href="/2023/12/20/Kafka%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/20/Kafka%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Golang编码规范和建议</title>
+    <link href="/2023/12/20/Golang%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E5%92%8C%E5%BB%BA%E8%AE%AE/"/>
+    <url>/2023/12/20/Golang%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E5%92%8C%E5%BB%BA%E8%AE%AE/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Redis学习笔记</title>
+    <link href="/2023/12/20/Redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/20/Redis%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>MySQL学习笔记</title>
+    <link href="/2023/12/20/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/20/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>MongoDB学习笔记</title>
+    <link href="/2023/12/20/MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
+    <url>/2023/12/20/MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Git常用命令和使用规范</title>
+    <link href="/2023/12/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/"/>
+    <url>/2023/12/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/</url>
+    
+    <content type="html"><![CDATA[<h2 id="一、Git常用命令列表"><a href="#一、Git常用命令列表" class="headerlink" title="一、Git常用命令列表"></a>一、Git常用命令列表</h2><ol><li><p><code>git config</code>： 设置 Git 配置值</p><p>设置 Git 用户名</p><p>创建 Git 别名</p><p>设置 Git 编辑器</p><p>列出 Git 配置属性</p></li><li><p><code>git init</code> ： 创建一个新的 Git 仓库</p></li><li><p><code>git clone</code> ： 克隆一个 Git 仓库</p></li><li><p><code>git add</code>： 添加文件内容到暂存区</p><p>添加单个文件</p><p>添加多个文件</p><p>添加所有文件</p><p>添加删除和修改的文件</p><p>在当前目录中添加文件</p><p>添加具有特定文件扩展名的文件</p></li><li><p><code>git rm -f</code>： 从 Git 存储库中删除文件</p><p>删除单个文件</p><p>删除多个文件</p><p>删除目录</p></li><li><p><code>git mv</code>： 移动或重命名 Git 存储库文件</p><p>重命名项目文件</p><p>移动项目文件</p></li><li><p><code>git commit</code>： 将更改保存到 Git 存储库</p><p>添加新提交</p><p>修复先前的提交</p><p>提交修改后的文件</p></li><li><p><code>git branch</code>： 列出、创建或删除分支</p><p>列出存储库分支</p><p>创建一个新分支</p><p>删除现有分支</p></li><li><p><code>git status</code> ： 显示存储库和暂存区的状态</p></li><li><p><code>git diff</code>： 跟踪文件中的更改</p><p>显示未暂存但已修改的更改</p><p>显示分阶段但未提交的更改</p><p>显示两个分支之间的差异</p><p>比较已提交与未提交的文件</p><p>比较两个特定文件版本</p></li><li><p><code>git log</code>： 显示提交历史</p><p>显示提交历史</p><p>过滤 Git 日志</p></li><li><p><code>git checkout</code>： 在分支之间切换</p><p>切换到现有分支</p><p>切换到新分支</p><p>恢复文件的先前版本</p></li><li><p><code>git merge</code>：合并 Git 分支</p></li><li><p><code>git fetch</code> ： 下载远程 Git 存储库</p></li><li><p><code>git pull</code>：下载并合并 Git 仓库</p></li><li><p><code>git push</code>：使用本地提交更新远程分支</p></li><li><p><code>git rebase</code> ： 更改一系列提交</p></li><li><p><code>git revert</code> ： 还原现有提交</p></li><li><p><code>git reset</code> ： 还原 Git 存储库提交</p></li><li><p><code>git stash</code> ： 在本地保存未提交的更改</p></li><li><p><code>git reflog</code> ： 跟踪分支的变化</p></li></ol><h2 id="二、Git常用命令用法详情"><a href="#二、Git常用命令用法详情" class="headerlink" title="二、Git常用命令用法详情"></a>二、Git常用命令用法详情</h2><ol><li><p><strong><code>git config</code>： 设置 Git 配置值</strong></p><p><strong>设置 Git 用户名</strong></p><p>要全局设置与git存储库关联的用户名和电子邮件地址，请执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;your_username&quot;</span> <br>git config --global user.email <span class="hljs-string">&quot;your_email_address&quot;</span><br></code></pre></td></tr></table></figure><p>也可以执行<code>vi ~/.gitconfig</code>，修改全局的gitconfig配置文件，在配置文件加入以下内容</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">[user]<br>        name = your_username<br>        email = your_email_address<br></code></pre></td></tr></table></figure><p>要在项目基础上（不是全局）设置存储库的用户名和密码，请执行：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config user.name <span class="hljs-string">&quot;your_username&quot;</span><br>git config user.email <span class="hljs-string">&quot;your_email_address&quot;</span><br></code></pre></td></tr></table></figure><p>也可以在对应项目根目录下执行<code>vi .git/config</code>修改项目的git配置文件，在配置文件加入以下内容</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">[user]<br>        name = your_username<br>        email = your_email_address<br></code></pre></td></tr></table></figure><p><strong>创建Git别名</strong></p><p>我们还可以使用git config命令创建 Git 别名，如下所示</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global alias.s status <br></code></pre></td></tr></table></figure><p><strong>设置 Git 编辑器</strong></p><p>git config命令也非常适合用于在编写或编辑提交消息时设置用户的首选文本编辑器：将“ editor-name ”替换为您正在使用的文本编辑器的名称。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global core.editor <span class="hljs-string">&quot;editor-name&quot;</span> [Globally]<br>git config core.editor <span class="hljs-string">&quot;editor-name&quot;</span>          [Project Basis]<br></code></pre></td></tr></table></figure><p><strong>列出 Git 配置属性</strong></p><p>此外，可以使用以下git config命令查看活动存储库的当前配置选项：</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --list<br></code></pre></td></tr></table></figure></li><li><p><strong><code>git init</code> ： 创建一个新的 Git 仓库</strong></p><p>git init命令可以在本地文件系统的当前目录上初始化 Git 存储库。它还创建一个’.git’子目录（隐藏目录），其中包含必要的存储库文件，如索引和对象数据库文件。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init <br></code></pre></td></tr></table></figure></li><li><p><strong>git clone：克隆一个 Git 仓库</strong></p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> [URL]<br></code></pre></td></tr></table></figure></li></ol><h2 id="三、Git命令使用规范和建议"><a href="#三、Git命令使用规范和建议" class="headerlink" title="三、Git命令使用规范和建议"></a>三、Git命令使用规范和建议</h2><p>参考：</p><ol><li><a href="https://bbs.huaweicloud.com/blogs/388474">https://bbs.huaweicloud.com/blogs/388474</a></li><li><a href="https://cloud.tencent.com/developer/article/1910779">https://cloud.tencent.com/developer/article/1910779</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>工具使用</category>
       
     </categories>
     
@@ -115,7 +425,7 @@
     
     <categories>
       
-      <category>方案设计</category>
+      <category>工具使用</category>
       
     </categories>
     
@@ -133,7 +443,7 @@
   
   
   <entry>
-    <title>redis分布式锁的实现</title>
+    <title>Redis分布式锁的实现</title>
     <link href="/2023/12/16/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%AE%9E%E7%8E%B0/"/>
     <url>/2023/12/16/redis%E5%88%86%E5%B8%83%E5%BC%8F%E9%94%81%E7%9A%84%E5%AE%9E%E7%8E%B0/</url>
     
@@ -142,7 +452,7 @@
     
     <categories>
       
-      <category>后端技术</category>
+      <category>方案设计</category>
       
     </categories>
     
@@ -188,10 +498,10 @@
   
   <entry>
     <title>借助Hexo+GitHub Pages零成本搭建个人博客</title>
-    <link href="/2023/12/15/my-blog-build-remark/"/>
-    <url>/2023/12/15/my-blog-build-remark/</url>
+    <link href="/2023/12/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/"/>
+    <url>/2023/12/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/</url>
     
-    <content type="html"><![CDATA[<h2 id="一、前期准备工作"><a href="#一、前期准备工作" class="headerlink" title="一、前期准备工作"></a>一、前期准备工作</h2><p>注：我的电脑是mac，后面的全部指令都是mac上操作的</p><ol><li>申请GitHub账号</li><li>本地安装Git</li><li>本地NodeJS<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install node<br></code></pre></td></tr></table></figure></li><li>本地安装Hexo<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure></li></ol><h2 id="二、用Hexo生成博客项目"><a href="#二、用Hexo生成博客项目" class="headerlink" title="二、用Hexo生成博客项目"></a>二、用Hexo生成博客项目</h2><ol><li>初始化博客<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init my-blog<br><span class="hljs-built_in">cd</span> my-blog<br>npm install<br></code></pre></td></tr></table></figure></li><li>生成网页文件&amp;本地启动<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate <span class="hljs-comment"># 生成页面，此命令可以简写为 `hexo g`</span><br>hexo server <span class="hljs-comment"># 本地启动，可简写为 `hexo s`</span><br></code></pre></td></tr></table></figure>通过 hexo g 生成的页面文件在项目 public 目录下;<br>使用 hexo clean 命令可以清理生成的页面文件。当配置未生效时，建议执行清理命令。</li><li>本地访问<br>浏览器访问：<a href="http://localhost:4000/">http://localhost:4000/</a> 会看到一个比较简陋的页面。没关系，接下来介绍如何更换主题。</li></ol><h2 id="三、安装-配置主题"><a href="#三、安装-配置主题" class="headerlink" title="三、安装&amp;配置主题"></a>三、安装&amp;配置主题</h2><p>官方提供了数百种主题任君选择，可以根据个人喜好更换，具体可以点击 (<a href="https://hexo.io/themes/">https://hexo.io/themes/</a>) 查看。<br>本文将主要介绍 Fluid 主题的安装与配置。</p><ol><li>安装 Fluid 主题<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>在博客根路径下创建 _config.fluid.yml 文件，并将主题的 .&#x2F;node_modules&#x2F;hexo-theme-fluid&#x2F;_config.yml 文件内容复制过去</li><li>指定主题<br>将如下修改应用到 Hexo 博客目录中的 _config.yml:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">theme: fluid  <span class="hljs-comment"># 指定主题</span><br>language: zh-CN  <span class="hljs-comment"># 指定语言，会影响主题显示的语言，按需修改</span><br></code></pre></td></tr></table></figure></li><li>创建「关于页」<br>首次使用主题的「关于页」需要手动创建。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new page about<br></code></pre></td></tr></table></figure>创建成功后修改 &#x2F;source&#x2F;about&#x2F;index.md，添加 layout 属性。修改后的文件示例如下：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-string">title:</span> <span class="hljs-string">标题</span><br><span class="hljs-string">layout:</span> <span class="hljs-string">about</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">这里写关于页的正文，支持</span> <span class="hljs-string">Markdown,</span> <span class="hljs-string">HTML</span><br></code></pre></td></tr></table></figure>需要注意的是， layout: about 必须存在，并且不能修改成其他值，否则不会显示头像等样式。</li><li>更新 Fluid 主题<br>通过 npm 安装主题的情况，可在博客目录下执行命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm update --save hexo-theme-fluid<br></code></pre></td></tr></table></figure></li><li>本地启动</li></ol><p>  执行如下命令重新生成页面，并启动 Hexo 服务。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp; hexo g &amp; hexo s<br></code></pre></td></tr></table></figure><p>再次通过浏览器访问 <a href="http://localhost:4000/">http://localhost:4000</a> , 便可以看到页面变得美观多了。</p><h2 id="四、创建文章"><a href="#四、创建文章" class="headerlink" title="四、创建文章"></a>四、创建文章</h2><ol><li>修改 _config.yml 文件。这项配置是为了在生成文章的同时，生成一个同名的资源目录用于存放图片等资源文件。</li></ol><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vbnet"><span class="hljs-symbol">post_asset_folder:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure><ol start="2"><li>创建文件名为 my-blog-build-remark 文章。</li></ol><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haxe">hexo <span class="hljs-keyword">new</span> <span class="hljs-type">post</span> my-blog-build-remark<br></code></pre></td></tr></table></figure><ol start="3"><li>设置文章的标题及其他元素信息。</li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">借助Hexo+GitHub</span> <span class="hljs-string">Pages零成本搭建个人博客</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">&#x27;hexo&#x27;</span>,<span class="hljs-string">&#x27;fluid&#x27;</span>]<br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure><ol start="4"><li>如上命令执行成功后，在 source&#x2F;_posts&#x2F; 目录下生成了一个 Markdown 文件和一个同名的资源目录。<br>在 source&#x2F;_posts&#x2F;my-blog-build-remark 目录中放置一个图片文件 posts-file-tree.png，整体目录结构如下：</li></ol><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs dos">$ source/_posts (main)&gt; <span class="hljs-built_in">tree</span><br>.<br>├── hello-world.<span class="hljs-built_in">md</span><br>├── my-blog-build-remark<br>│   └── img.png<br>└── my-blog-build-remark.<span class="hljs-built_in">md</span><br></code></pre></td></tr></table></figure><ol start="5"><li>文章中插入图片</li></ol><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">!<span class="hljs-selector-attr">[图片备注]</span>(./my-blog-build-remark/<span class="hljs-selector-tag">img</span><span class="hljs-selector-class">.png</span>)<br></code></pre></td></tr></table></figure><p>文章创建并编辑好之后，就可以通过 <code>hexo g &amp;&amp; hexo s</code> 命令启动服务，并在本地预览文章。</p><h2 id="五、发布GitHub-Pages"><a href="#五、发布GitHub-Pages" class="headerlink" title="五、发布GitHub Pages"></a>五、发布GitHub Pages</h2><ol><li>在GitHub上建立仓库</li><li>token获取<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xl">登录G<span class="hljs-function"><span class="hljs-title">itHub</span>-&gt;</span>S<span class="hljs-function"><span class="hljs-title">ettings</span>-&gt;</span>D<span class="hljs-function"><span class="hljs-title">eveloper</span> settings-&gt;</span>P<span class="hljs-function"><span class="hljs-title">ersonal</span> access tokens-&gt;</span>T<span class="hljs-function"><span class="hljs-title">okens</span>-&gt;</span>Generate a personal access token<br></code></pre></td></tr></table></figure></li><li>修改站点配置 _config.yml<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repo:</span> <span class="hljs-params">&lt;repository url&gt;</span> <span class="hljs-meta"># https:<span class="hljs-comment">//github.com/&lt;GitHub用户名&gt;/&lt;GitHub用户名&gt;.github.io.git</span></span><br><span class="hljs-symbol">  branch:</span> [branch]<br><span class="hljs-symbol">  token:</span> [token]<br></code></pre></td></tr></table></figure></li><li>生成站点文件并推送至远程 GitHub 仓库<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp; hexo deploy<br></code></pre></td></tr></table></figure>只需稍等片刻，个人博客站点就会显示在 Github Pages 中。</li></ol><h2 id="六、可能会遇到的问题"><a href="#六、可能会遇到的问题" class="headerlink" title="六、可能会遇到的问题"></a>六、可能会遇到的问题</h2><ol><li>文章中插入图片浏览器显示不出来的解决办法<br><img src="/2023/12/15/my-blog-build-remark/img.png" alt="图片显示不出来"><br>上面的错误是因为Hexo缺少处理图片的插件，导致生成的代码用的图片链接是相对路径，如果要让浏览器能够访问图片需要用绝对路径。<br>这里需要下载插件帮助我们处理图片路径问题。安装插件命令如下：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-filter-image --save<br></code></pre></td></tr></table></figure>安装完重新生成代码就可以了<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo  clean<br>hexo g &amp; hexo s<br></code></pre></td></tr></table></figure></li></ol><h2 id="七、参考资料"><a href="#七、参考资料" class="headerlink" title="七、参考资料"></a>七、参考资料</h2><ol><li>Hexo Docs：<a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></li><li>Hexo Fluid 用户手册：<a href="https://fluid-dev.github.io/hexo-fluid-docs/">https://fluid-dev.github.io/hexo-fluid-docs/</a></li><li><a href="https://xie.infoq.cn/article/ac51ce1f6e9434779c35cbb6c">https://xie.infoq.cn/article/ac51ce1f6e9434779c35cbb6c</a></li></ol>]]></content>
+    <content type="html"><![CDATA[<h2 id="一、前期准备工作"><a href="#一、前期准备工作" class="headerlink" title="一、前期准备工作"></a>一、前期准备工作</h2><p>注：我的电脑是mac，后面的全部指令都是mac上操作的</p><ol><li>申请GitHub账号</li><li>本地安装Git</li><li>本地NodeJS<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">brew install node<br></code></pre></td></tr></table></figure></li><li>本地安装Hexo<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install -g hexo-cli<br></code></pre></td></tr></table></figure></li></ol><h2 id="二、用Hexo生成博客项目"><a href="#二、用Hexo生成博客项目" class="headerlink" title="二、用Hexo生成博客项目"></a>二、用Hexo生成博客项目</h2><ol><li>初始化博客<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo init my-blog<br><span class="hljs-built_in">cd</span> my-blog<br>npm install<br></code></pre></td></tr></table></figure></li><li>生成网页文件&amp;本地启动<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo generate <span class="hljs-comment"># 生成页面，此命令可以简写为 `hexo g`</span><br>hexo server <span class="hljs-comment"># 本地启动，可简写为 `hexo s`</span><br></code></pre></td></tr></table></figure>通过 hexo g 生成的页面文件在项目 public 目录下;<br>使用 hexo clean 命令可以清理生成的页面文件。当配置未生效时，建议执行清理命令。</li><li>本地访问<br>浏览器访问：<a href="http://localhost:4000/">http://localhost:4000/</a> 会看到一个比较简陋的页面。没关系，接下来介绍如何更换主题。</li></ol><h2 id="三、安装-配置主题"><a href="#三、安装-配置主题" class="headerlink" title="三、安装&amp;配置主题"></a>三、安装&amp;配置主题</h2><p>官方提供了数百种主题任君选择，可以根据个人喜好更换，具体可以点击 (<a href="https://hexo.io/themes/">https://hexo.io/themes/</a>) 查看。<br>本文将主要介绍 Fluid 主题的安装与配置。</p><ol><li>安装 Fluid 主题<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install --save hexo-theme-fluid<br></code></pre></td></tr></table></figure>在博客根路径下创建 _config.fluid.yml 文件，并将主题的 .&#x2F;node_modules&#x2F;hexo-theme-fluid&#x2F;_config.yml 文件内容复制过去</li><li>指定主题<br>将如下修改应用到 Hexo 博客目录中的 _config.yml:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">theme: fluid  <span class="hljs-comment"># 指定主题</span><br>language: zh-CN  <span class="hljs-comment"># 指定语言，会影响主题显示的语言，按需修改</span><br></code></pre></td></tr></table></figure></li><li>创建「关于页」<br>首次使用主题的「关于页」需要手动创建。<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo new page about<br></code></pre></td></tr></table></figure>创建成功后修改 &#x2F;source&#x2F;about&#x2F;index.md，添加 layout 属性。修改后的文件示例如下：<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-string">title:</span> <span class="hljs-string">标题</span><br><span class="hljs-string">layout:</span> <span class="hljs-string">about</span><br><span class="hljs-meta">---</span><br><span class="hljs-string">这里写关于页的正文，支持</span> <span class="hljs-string">Markdown,</span> <span class="hljs-string">HTML</span><br></code></pre></td></tr></table></figure>需要注意的是， layout: about 必须存在，并且不能修改成其他值，否则不会显示头像等样式。</li><li>更新 Fluid 主题<br>通过 npm 安装主题的情况，可在博客目录下执行命令：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm update --save hexo-theme-fluid<br></code></pre></td></tr></table></figure></li><li>本地启动</li></ol><p>  执行如下命令重新生成页面，并启动 Hexo 服务。</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp; hexo g &amp; hexo s<br></code></pre></td></tr></table></figure><p>再次通过浏览器访问 <a href="http://localhost:4000/">http://localhost:4000</a> , 便可以看到页面变得美观多了。</p><h2 id="四、创建文章"><a href="#四、创建文章" class="headerlink" title="四、创建文章"></a>四、创建文章</h2><ol><li>修改 _config.yml 文件。这项配置是为了在生成文章的同时，生成一个同名的资源目录用于存放图片等资源文件。</li></ol><figure class="highlight vbnet"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs vbnet"><span class="hljs-symbol">post_asset_folder:</span> <span class="hljs-literal">true</span><br></code></pre></td></tr></table></figure><ol start="2"><li>创建文件名为 my-blog-build-remark 文章。</li></ol><figure class="highlight haxe"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs haxe">hexo <span class="hljs-keyword">new</span> <span class="hljs-type">post</span> my-blog-build-remark<br></code></pre></td></tr></table></figure><ol start="3"><li>设置文章的标题及其他元素信息。</li></ol><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-meta">---</span><br><span class="hljs-attr">title:</span> <span class="hljs-string">借助Hexo+GitHub</span> <span class="hljs-string">Pages零成本搭建个人博客</span><br><span class="hljs-attr">tags:</span> [<span class="hljs-string">&#x27;hexo&#x27;</span>,<span class="hljs-string">&#x27;fluid&#x27;</span>]<br><span class="hljs-meta">---</span><br></code></pre></td></tr></table></figure><ol start="4"><li>如上命令执行成功后，在 source&#x2F;_posts&#x2F; 目录下生成了一个 Markdown 文件和一个同名的资源目录。<br>在 source&#x2F;_posts&#x2F;my-blog-build-remark 目录中放置一个图片文件 posts-file-tree.png，整体目录结构如下：</li></ol><figure class="highlight dos"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><code class="hljs dos">$ source/_posts (main)&gt; <span class="hljs-built_in">tree</span><br>.<br>├── hello-world.<span class="hljs-built_in">md</span><br>├── my-blog-build-remark<br>│   └── img.png<br>└── my-blog-build-remark.<span class="hljs-built_in">md</span><br></code></pre></td></tr></table></figure><ol start="5"><li>文章中插入图片</li></ol><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs css">!<span class="hljs-selector-attr">[图片备注]</span>(./my-blog-build-remark/<span class="hljs-selector-tag">img</span><span class="hljs-selector-class">.png</span>)<br></code></pre></td></tr></table></figure><p>文章创建并编辑好之后，就可以通过 <code>hexo g &amp;&amp; hexo s</code> 命令启动服务，并在本地预览文章。</p><h2 id="五、发布GitHub-Pages"><a href="#五、发布GitHub-Pages" class="headerlink" title="五、发布GitHub Pages"></a>五、发布GitHub Pages</h2><ol><li>在GitHub上建立仓库</li><li>token获取<figure class="highlight xl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs xl">登录G<span class="hljs-function"><span class="hljs-title">itHub</span>-&gt;</span>S<span class="hljs-function"><span class="hljs-title">ettings</span>-&gt;</span>D<span class="hljs-function"><span class="hljs-title">eveloper</span> settings-&gt;</span>P<span class="hljs-function"><span class="hljs-title">ersonal</span> access tokens-&gt;</span>T<span class="hljs-function"><span class="hljs-title">okens</span>-&gt;</span>Generate a personal access token<br></code></pre></td></tr></table></figure></li><li>修改站点配置 _config.yml<figure class="highlight dts"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><code class="hljs dts"><span class="hljs-symbol">deploy:</span><br><span class="hljs-symbol">  type:</span> git<br><span class="hljs-symbol">  repo:</span> <span class="hljs-params">&lt;repository url&gt;</span> <span class="hljs-meta"># https:<span class="hljs-comment">//github.com/&lt;GitHub用户名&gt;/&lt;GitHub用户名&gt;.github.io.git</span></span><br><span class="hljs-symbol">  branch:</span> [branch]<br><span class="hljs-symbol">  token:</span> [token]<br></code></pre></td></tr></table></figure></li><li>生成站点文件并推送至远程 GitHub 仓库<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo clean &amp; hexo deploy<br></code></pre></td></tr></table></figure>只需稍等片刻，个人博客站点就会显示在 Github Pages 中。</li></ol><h2 id="六、可能会遇到的问题"><a href="#六、可能会遇到的问题" class="headerlink" title="六、可能会遇到的问题"></a>六、可能会遇到的问题</h2><ol><li>文章中插入图片浏览器显示不出来的解决办法<br><img src="/2023/12/15/%E5%8D%9A%E5%AE%A2%E6%90%AD%E5%BB%BA/img.png" alt="图片显示不出来"><br>上面的错误是因为Hexo缺少处理图片的插件，导致生成的代码用的图片链接是相对路径，如果要让浏览器能够访问图片需要用绝对路径。<br>这里需要下载插件帮助我们处理图片路径问题。安装插件命令如下：<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">npm install hexo-filter-image --save<br></code></pre></td></tr></table></figure>安装完重新生成代码就可以了<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">hexo  clean<br>hexo g &amp; hexo s<br></code></pre></td></tr></table></figure></li></ol><h2 id="七、参考资料"><a href="#七、参考资料" class="headerlink" title="七、参考资料"></a>七、参考资料</h2><ol><li>Hexo Docs：<a href="https://hexo.io/zh-cn/docs/">https://hexo.io/zh-cn/docs/</a></li><li>Hexo Fluid 用户手册：<a href="https://fluid-dev.github.io/hexo-fluid-docs/">https://fluid-dev.github.io/hexo-fluid-docs/</a></li><li><a href="https://xie.infoq.cn/article/ac51ce1f6e9434779c35cbb6c">https://xie.infoq.cn/article/ac51ce1f6e9434779c35cbb6c</a></li></ol>]]></content>
     
     
     <categories>

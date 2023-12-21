@@ -16,15 +16,15 @@
   <meta name="author" content="cswuyp">
   <meta name="keywords" content="">
   
-    <meta name="description" content="参考：  https:&#x2F;&#x2F;bbs.huaweicloud.com&#x2F;blogs&#x2F;388474 https:&#x2F;&#x2F;cloud.tencent.com&#x2F;developer&#x2F;article&#x2F;1910779">
+    <meta name="description" content="一、Git常用命令列表 git config： 设置 Git 配置值 设置 Git 用户名 创建 Git 别名 设置 Git 编辑器 列出 Git 配置属性  git init ： 创建一个新的 Git 仓库  git clone ： 克隆一个 Git 仓库  git add： 添加文件内容到暂存区 添加单个文件 添加多个文件 添加所有文件 添加删除和修改的文件 在当前目录中添加文件 添加具有特定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git常用命令和使用规范">
 <meta property="og:url" content="http://example.com/2023/12/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/index.html">
 <meta property="og:site_name" content="cswuyp&#39;s blog">
-<meta property="og:description" content="参考：  https:&#x2F;&#x2F;bbs.huaweicloud.com&#x2F;blogs&#x2F;388474 https:&#x2F;&#x2F;cloud.tencent.com&#x2F;developer&#x2F;article&#x2F;1910779">
+<meta property="og:description" content="一、Git常用命令列表 git config： 设置 Git 配置值 设置 Git 用户名 创建 Git 别名 设置 Git 编辑器 列出 Git 配置属性  git init ： 创建一个新的 Git 仓库  git clone ： 克隆一个 Git 仓库  git add： 添加文件内容到暂存区 添加单个文件 添加多个文件 添加所有文件 添加删除和修改的文件 在当前目录中添加文件 添加具有特定">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-19T07:42:41.000Z">
-<meta property="article:modified_time" content="2023-12-19T08:42:34.856Z">
+<meta property="article:modified_time" content="2023-12-21T12:23:00.060Z">
 <meta property="article:author" content="cswuyp">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2 字
+          725 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          1 分钟
+          7 分钟
         
       </span>
     
@@ -273,7 +273,118 @@
             
               <div class="markdown-body">
                 
-                <p>参考：</p>
+                <h2 id="一、Git常用命令列表"><a href="#一、Git常用命令列表" class="headerlink" title="一、Git常用命令列表"></a>一、Git常用命令列表</h2><ol>
+<li><p><code>git config</code>： 设置 Git 配置值</p>
+<p>设置 Git 用户名</p>
+<p>创建 Git 别名</p>
+<p>设置 Git 编辑器</p>
+<p>列出 Git 配置属性</p>
+</li>
+<li><p><code>git init</code> ： 创建一个新的 Git 仓库</p>
+</li>
+<li><p><code>git clone</code> ： 克隆一个 Git 仓库</p>
+</li>
+<li><p><code>git add</code>： 添加文件内容到暂存区</p>
+<p>添加单个文件</p>
+<p>添加多个文件</p>
+<p>添加所有文件</p>
+<p>添加删除和修改的文件</p>
+<p>在当前目录中添加文件</p>
+<p>添加具有特定文件扩展名的文件</p>
+</li>
+<li><p><code>git rm -f</code>： 从 Git 存储库中删除文件</p>
+<p>删除单个文件</p>
+<p>删除多个文件</p>
+<p>删除目录</p>
+</li>
+<li><p><code>git mv</code>： 移动或重命名 Git 存储库文件</p>
+<p>重命名项目文件</p>
+<p>移动项目文件</p>
+</li>
+<li><p><code>git commit</code>： 将更改保存到 Git 存储库</p>
+<p>添加新提交</p>
+<p>修复先前的提交</p>
+<p>提交修改后的文件</p>
+</li>
+<li><p><code>git branch</code>： 列出、创建或删除分支</p>
+<p>列出存储库分支</p>
+<p>创建一个新分支</p>
+<p>删除现有分支</p>
+</li>
+<li><p><code>git status</code> ： 显示存储库和暂存区的状态</p>
+</li>
+<li><p><code>git diff</code>： 跟踪文件中的更改</p>
+<p>显示未暂存但已修改的更改</p>
+<p>显示分阶段但未提交的更改</p>
+<p>显示两个分支之间的差异</p>
+<p>比较已提交与未提交的文件</p>
+<p>比较两个特定文件版本</p>
+</li>
+<li><p><code>git log</code>： 显示提交历史</p>
+<p>显示提交历史</p>
+<p>过滤 Git 日志</p>
+</li>
+<li><p><code>git checkout</code>： 在分支之间切换</p>
+<p>切换到现有分支</p>
+<p>切换到新分支</p>
+<p>恢复文件的先前版本</p>
+</li>
+<li><p><code>git merge</code>：合并 Git 分支</p>
+</li>
+<li><p><code>git fetch</code> ： 下载远程 Git 存储库</p>
+</li>
+<li><p><code>git pull</code>：下载并合并 Git 仓库</p>
+</li>
+<li><p><code>git push</code>：使用本地提交更新远程分支</p>
+</li>
+<li><p><code>git rebase</code> ： 更改一系列提交</p>
+</li>
+<li><p><code>git revert</code> ： 还原现有提交</p>
+</li>
+<li><p><code>git reset</code> ： 还原 Git 存储库提交</p>
+</li>
+<li><p><code>git stash</code> ： 在本地保存未提交的更改</p>
+</li>
+<li><p><code>git reflog</code> ： 跟踪分支的变化</p>
+</li>
+</ol>
+<h2 id="二、Git常用命令用法详情"><a href="#二、Git常用命令用法详情" class="headerlink" title="二、Git常用命令用法详情"></a>二、Git常用命令用法详情</h2><ol>
+<li><p><strong><code>git config</code>： 设置 Git 配置值</strong></p>
+<p><strong>设置 Git 用户名</strong></p>
+<p>要全局设置与git存储库关联的用户名和电子邮件地址，请执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global user.name <span class="hljs-string">&quot;your_username&quot;</span> <br>git config --global user.email <span class="hljs-string">&quot;your_email_address&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>也可以执行<code>vi ~/.gitconfig</code>，修改全局的gitconfig配置文件，在配置文件加入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">[user]<br>        name = your_username<br>        email = your_email_address<br></code></pre></td></tr></table></figure>
+
+
+
+<p>要在项目基础上（不是全局）设置存储库的用户名和密码，请执行：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config user.name <span class="hljs-string">&quot;your_username&quot;</span><br>git config user.email <span class="hljs-string">&quot;your_email_address&quot;</span><br></code></pre></td></tr></table></figure>
+
+<p>也可以在对应项目根目录下执行<code>vi .git/config</code>修改项目的git配置文件，在配置文件加入以下内容</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">[user]<br>        name = your_username<br>        email = your_email_address<br></code></pre></td></tr></table></figure>
+
+<p><strong>创建Git别名</strong></p>
+<p>我们还可以使用git config命令创建 Git 别名，如下所示</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global alias.s status <br></code></pre></td></tr></table></figure>
+
+<p><strong>设置 Git 编辑器</strong></p>
+<p>git config命令也非常适合用于在编写或编辑提交消息时设置用户的首选文本编辑器：将“ editor-name ”替换为您正在使用的文本编辑器的名称。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --global core.editor <span class="hljs-string">&quot;editor-name&quot;</span> [Globally]<br>git config core.editor <span class="hljs-string">&quot;editor-name&quot;</span>          [Project Basis]<br></code></pre></td></tr></table></figure>
+
+<p><strong>列出 Git 配置属性</strong></p>
+<p>此外，可以使用以下git config命令查看活动存储库的当前配置选项：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git config --list<br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong><code>git init</code> ： 创建一个新的 Git 仓库</strong></p>
+<p>git init命令可以在本地文件系统的当前目录上初始化 Git 存储库。它还创建一个’.git’子目录（隐藏目录），其中包含必要的存储库文件，如索引和对象数据库文件。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git init <br></code></pre></td></tr></table></figure>
+</li>
+<li><p><strong>git clone：克隆一个 Git 仓库</strong></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">git <span class="hljs-built_in">clone</span> [URL]<br></code></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="三、Git命令使用规范和建议"><a href="#三、Git命令使用规范和建议" class="headerlink" title="三、Git命令使用规范和建议"></a>三、Git命令使用规范和建议</h2><p>参考：</p>
 <ol>
 <li><a target="_blank" rel="noopener" href="https://bbs.huaweicloud.com/blogs/388474">https://bbs.huaweicloud.com/blogs/388474</a></li>
 <li><a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1910779">https://cloud.tencent.com/developer/article/1910779</a></li>
@@ -296,7 +407,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E5%90%8E%E7%AB%AF%E6%8A%80%E6%9C%AF/" class="category-chain-item">后端技术</a>
+  <a href="/categories/%E5%B7%A5%E5%85%B7%E4%BD%BF%E7%94%A8/" class="category-chain-item">工具使用</a>
   
   
 
@@ -324,6 +435,12 @@
                 <div class="post-prevnext my-3">
                   <article class="post-prev col-6">
                     
+                    
+                      <a href="/2023/12/20/MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="MongoDB学习笔记">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">MongoDB学习笔记</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
                     
                   </article>
                   <article class="post-next col-6">
