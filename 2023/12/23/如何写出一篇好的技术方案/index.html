@@ -16,19 +16,22 @@
   <meta name="author" content="cswuyp">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="《金字塔原理》读书笔记">
-<meta property="og:url" content="http://example.com/2023/12/21/%E3%80%8A%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/index.html">
+    <meta name="description" content="写技术方案的意义写技术方案根本目的是提高研发效率和质量，具体体现在以下方面： 提高沟通效率 产品：验证技术方案是否能够 match 上产品方案 测试：验证技术方案对测试方案是否有足够 &amp; 准确的输入 同事 &amp; leader：参与技术方案评审，验证技术方案的合理性 新人(不单单指新同学也指新接触这一块的同学)：拿到技术方案可以很快对某一块的事情熟悉起来  提高开发效率和质量对于开发同">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何写出一篇好的技术方案">
+<meta property="og:url" content="http://example.com/2023/12/23/%E5%A6%82%E4%BD%95%E5%86%99%E5%87%BA%E4%B8%80%E7%AF%87%E5%A5%BD%E7%9A%84%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88/index.html">
 <meta property="og:site_name" content="cswuyp&#39;s blog">
+<meta property="og:description" content="写技术方案的意义写技术方案根本目的是提高研发效率和质量，具体体现在以下方面： 提高沟通效率 产品：验证技术方案是否能够 match 上产品方案 测试：验证技术方案对测试方案是否有足够 &amp; 准确的输入 同事 &amp; leader：参与技术方案评审，验证技术方案的合理性 新人(不单单指新同学也指新接触这一块的同学)：拿到技术方案可以很快对某一块的事情熟悉起来  提高开发效率和质量对于开发同">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-21T12:14:42.000Z">
-<meta property="article:modified_time" content="2023-12-21T12:14:42.560Z">
+<meta property="article:published_time" content="2023-12-23T09:18:38.000Z">
+<meta property="article:modified_time" content="2023-12-25T13:23:59.202Z">
 <meta property="article:author" content="cswuyp">
+<meta property="article:tag" content="方案设计">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>《金字塔原理》读书笔记 - cswuyp&#39;s blog</title>
+  <title>如何写出一篇好的技术方案 - cswuyp&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -194,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="《金字塔原理》读书笔记"></span>
+            <span id="subtitle" data-typed-text="如何写出一篇好的技术方案"></span>
           
         </div>
 
@@ -205,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-21 20:14" pubdate>
-          2023年12月21日 晚上
+        <time datetime="2023-12-23 17:18" pubdate>
+          2023年12月23日 下午
         </time>
       </span>
     
@@ -217,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          812 字
         
       </span>
     
@@ -228,7 +231,7 @@
         
         
         
-          1 分钟
+          7 分钟
         
       </span>
     
@@ -265,12 +268,62 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">《金字塔原理》读书笔记</h1>
+            <h1 id="seo-header">如何写出一篇好的技术方案</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <h2 id="写技术方案的意义"><a href="#写技术方案的意义" class="headerlink" title="写技术方案的意义"></a>写技术方案的意义</h2><p>写技术方案根本目的是提高研发效率和质量，具体体现在以下方面：</p>
+<h3 id="提高沟通效率"><a href="#提高沟通效率" class="headerlink" title="提高沟通效率"></a>提高沟通效率</h3><ol>
+<li>产品：验证技术方案是否能够 match 上产品方案</li>
+<li>测试：验证技术方案对测试方案是否有足够 &amp; 准确的输入</li>
+<li>同事 &amp; leader：参与技术方案评审，验证技术方案的合理性</li>
+<li>新人(不单单指新同学也指新接触这一块的同学)：拿到技术方案可以很快对某一块的事情熟悉起来</li>
+</ol>
+<h3 id="提高开发效率和质量"><a href="#提高开发效率和质量" class="headerlink" title="提高开发效率和质量"></a>提高开发效率和质量</h3><p>对于开发同学，通过写技术方案，把需求和实现提前梳理一遍，减少等到编码阶段才发现前期考虑不全导致返工的情况；并且写好技术方案再编码，使得编码时思维更加清晰，提高编码效率和质量。</p>
+<h2 id="什么样的技术方案是一个好的技术方案"><a href="#什么样的技术方案是一个好的技术方案" class="headerlink" title="什么样的技术方案是一个好的技术方案"></a>什么样的技术方案是一个好的技术方案</h2><p>技术方案是指导具体开发工作的，可以分别从开发的事前、事中、事后来讨论这个问题。</p>
+<h3 id="事前"><a href="#事前" class="headerlink" title="事前"></a>事前</h3><ol>
+<li>明确的目标：整个技术方案要达成什么目的</li>
+<li>低沟通成本：产品测试能从技术方案上获取足够的输入，不需要反复找你确认</li>
+<li>技术选型思考：为什么要这么做?和业内方案相比有什么好处和坏处，如何权衡的</li>
+</ol>
+<h3 id="事中"><a href="#事中" class="headerlink" title="事中"></a>事中</h3><ol>
+<li>少调整：尽可能少的技术方案需要调整， 否则无法完成开发任务</li>
+</ol>
+<h3 id="事后"><a href="#事后" class="headerlink" title="事后"></a>事后</h3><ol>
+<li>少bug：尽可能少的 bug 或者遗漏</li>
+<li>可扩展 &amp; 可复用：相对简单的改动就能支持新增需求，类似场景可复用不需要重复开发</li>
+</ol>
+<p>一篇好的技术方案可以贯穿整个研发的生命周期，并且能起到很好的指导意义，就如同写小说之前作者必须出一个大纲的逻辑是一致的。</p>
+<h2 id="如何写好一篇好的技术方案"><a href="#如何写好一篇好的技术方案" class="headerlink" title="如何写好一篇好的技术方案"></a>如何写好一篇好的技术方案</h2><p>下面列举写出一篇好的技术方案，应该做到的一些点。</p>
+<h2 id="清晰的目标"><a href="#清晰的目标" class="headerlink" title="清晰的目标"></a>清晰的目标</h2><p>满足需求</p>
+<p>可实施</p>
+<p>概要设计</p>
+<h2 id="详细设计"><a href="#详细设计" class="headerlink" title="详细设计"></a>详细设计</h2><h3 id="画图"><a href="#画图" class="headerlink" title="画图"></a>画图</h3><p>俗话说得好，一图胜千言。在输出技术方案时，除了文字描述外，适当的图表和图像能够更加直观地表达设计意图和操作流程，有助于别人理解方案内容。因此，在制作技术方案时，我们应该注重使用图表和图像来辅助说明，以提升沟通效率和信息传递的准确性。</p>
+<ol>
+<li><p>架构图</p>
+<p>从架构图可以看出模块划分和层次结构以及外部依赖。</p>
+</li>
+<li><p>模型设计</p>
+<p>数据模型设计，E-R 图是必不可少的。我们的服务如果需要做数据持久化，就需要有DB来存储数据。E-R图可以很直观的看出表的结构，每张表的字段设计和表与表之间的关联关系等。</p>
+</li>
+<li><p>时序图</p>
+</li>
+<li><p>流程图</p>
+</li>
+</ol>
+<h3 id="技术选型分析"><a href="#技术选型分析" class="headerlink" title="技术选型分析"></a>技术选型分析</h3><p>需求拆分</p>
+<p>方案的思考</p>
+<p>调研，业界通用的做法</p>
+<p>存储选型，mysql？mongoDB？</p>
+<p>语言选型？</p>
+<h3 id="安全生产"><a href="#安全生产" class="headerlink" title="安全生产"></a>安全生产</h3><p>一图胜千言</p>
+<p>参考</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://www.51cto.com/article/710330.html">https://www.51cto.com/article/710330.html</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/13503e2e7195">https://www.jianshu.com/p/13503e2e7195</a></li>
+</ol>
+
                 
               </div>
             
@@ -278,6 +331,13 @@
             <div>
               <div class="post-metas my-3">
   
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E6%96%B9%E6%A1%88%E8%AE%BE%E8%AE%A1/" class="print-no-link">#方案设计</a>
+      
+    </div>
   
 </div>
 
@@ -289,9 +349,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/23/%E5%A6%82%E4%BD%95%E5%86%99%E5%87%BA%E4%B8%80%E7%AF%87%E5%A5%BD%E7%9A%84%E6%8A%80%E6%9C%AF%E6%96%B9%E6%A1%88/" title="如何写出一篇好的技术方案">
+                      <a href="/2023/12/25/%E9%AB%98%E6%95%88%E6%B2%9F%E9%80%9A%E7%9A%84%E6%8A%80%E5%B7%A7%E4%B8%8E%E6%96%B9%E6%B3%95/" title="高效沟通的技巧与方法">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">如何写出一篇好的技术方案</span>
+                        <span class="hidden-mobile">高效沟通的技巧与方法</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -299,8 +359,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/21/%E3%80%8A%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F%E4%B9%8B%E7%A6%85%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="《设计模式之禅》读书笔记">
-                        <span class="hidden-mobile">《设计模式之禅》读书笔记</span>
+                      <a href="/2023/12/21/%E3%80%8A%E9%87%91%E5%AD%97%E5%A1%94%E5%8E%9F%E7%90%86%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/" title="《金字塔原理》读书笔记">
+                        <span class="hidden-mobile">《金字塔原理》读书笔记</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
