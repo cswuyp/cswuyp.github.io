@@ -4,6 +4,58 @@
   
   
   <entry>
+    <title>RabbitMQ和Kafka对比</title>
+    <link href="/2024/01/04/RabbitMQ%E5%92%8CKafka%E5%AF%B9%E6%AF%94/"/>
+    <url>/2024/01/04/RabbitMQ%E5%92%8CKafka%E5%AF%B9%E6%AF%94/</url>
+    
+    <content type="html"><![CDATA[<h2 id="架构差异"><a href="#架构差异" class="headerlink" title="架构差异"></a>架构差异</h2><p>RabbitMQ 和 Apache Kafka 均允许生产者向使用者发送消息。<em>生产者</em>是发布信息的应用程序，而<em>使用者</em>是订阅和处理信息的应用程序。</p><p>在 RabbitMQ 和 Kafka 中，生产者和使用者的互动方式有所不同。在 RabbitMQ 中，生产者发送并监控消息是否到达目标使用者。另一方面，无论使用者是否检索消息，Kafka 生产者都会向队列发布消息。</p><p>可以将 RabbitMQ 视为接收邮件并将其传输给预定收件人的邮局。与此同时，Kafka 类似于图书馆，它在书架上整理生产者发布的不同类型消息。然后，使用者读取相应书架上的消息，并记住他们所读取的内容。 </p><h3 id="RabbitMQ-架构方法"><a href="#RabbitMQ-架构方法" class="headerlink" title="RabbitMQ 架构方法"></a><strong>RabbitMQ 架构方法</strong></h3><p>RabbitMQ 代理允许使用以下组件进行低延迟和复杂的消息分配：</p><ul><li><em>交换机</em>接收来自生产者的消息并确定应将它们路由到何处</li><li><em>队列</em>是接收来自交换机的消息并将其发送给使用者的存储空间</li><li><em>绑定</em>是连接交换机和代理的路径</li></ul><p>在 RabbitMQ 中，<em>路由密钥</em>是一种消息属性，用于将消息从交换机路由到特定队列。当生产者向交换机发送消息时，它会将路由密钥作为消息的一部分包含在内。然后，交换机使用此路由密钥来确定消息应传输到哪个队列。</p><h3 id="Kafka-架构方法"><a href="#Kafka-架构方法" class="headerlink" title="Kafka 架构方法"></a><strong>Kafka 架构方法</strong></h3><p>Kafka 集群通过更复杂的架构提供高吞吐量流事件处理。以下是 Kafka 的一些关键组件：</p><ul><li><em>Kafka 代理</em>是 Kafka 服务器，允许生产者将数据流式传输给使用者。 Kafka 代理包含主题及其相应的分区。 </li><li><em>主题</em>是在 Kafka 代理中对相似数据进行分组的数据存储。 </li><li><em>分区</em>是使用者所订阅主题中较小的数据存储空间。 </li><li>ZooKeeper 是特殊的软件，用于管理 Kafka 集群和分区以提供容错流式处理。ZooKeeper 最近被 Apache Kafka Raft（KRaft）协议所取代。</li></ul><p>Kafka 中的生产者为每条消息分配一个消息密钥。然后，Kafka 代理将消息存储在该特定主题的前导分区中。KRaft 协议使用共识算法来确定前导分区。 </p><h2 id="处理消息方式"><a href="#处理消息方式" class="headerlink" title="处理消息方式"></a>处理消息方式</h2><p>RabbitMQ 和 Apache Kafka 以不同的方式将数据从生产者转移到使用者。RabbitMQ 是通用消息代理，它优先考虑端到端消息传输。Kafka 是分布式事件流式处理平台，支持持续大数据的实时交换。</p><p>RabbitMQ 和 Kafka 针对不同的使用案例而设计，因此它们处理消息的方式有所不同。 接下来，我们讨论一些具体的差异。</p><h3 id="消息使用"><a href="#消息使用" class="headerlink" title="消息使用"></a><strong>消息使用</strong></h3><p>在 RabbitMQ 中，代理确保使用者收到消息。使用者应用程序扮演被动角色，等待 RabbitMQ 代理将消息推送到队列中。例如，银行应用程序可能会等待来自中央交易处理软件的短信提醒。</p><p>然而，Kafka 使用者更积极地读取和跟踪信息。当消息加入实体日志文件时，Kafka 使用者会跟踪他们读取的最后一条消息，并相应地更新偏移跟踪器。偏移跟踪器是读取消息后递增的计数器。使用 Kafka，生产者并不知道使用者会检索消息。 </p><h3 id="消息优先级"><a href="#消息优先级" class="headerlink" title="消息优先级"></a><strong>消息优先级</strong></h3><p>RabbitMQ 代理允许生产者软件使用优先队列升级某些消息。代理不是按<em>先入先出</em>的顺序发送消息，而是先处理更高优先级的消息，然后再处理普通消息。例如，零售应用程序可能每小时将销售交易排队一次。但是，如果系统管理员发出优先的备份数据库消息，则代理会立即发送该消息。</p><p>与 RabbitMQ 不同，Apache Kafka 不支持优先级队列。将所有消息分配到各自的分区时，该代理平等对待这些消息。 </p><h3 id="消息排序"><a href="#消息排序" class="headerlink" title="消息排序"></a><strong>消息排序</strong></h3><p>RabbitMQ 按特定顺序发送消息和对其进行排队。除非有更高优先级的消息排入系统，否则使用者会按照消息的发送顺序接收消息。</p><p>同时，Kafka 使用主题和分区对消息进行排队。当生产者发送消息时，消息会进入特定的主题和分区。由于 Kafka 不支持直接的生产者与使用者交换，因此使用者以不同的顺序从分区中拉取消息。 </p><h3 id="消息删除"><a href="#消息删除" class="headerlink" title="消息删除"></a><strong>消息删除</strong></h3><p>RabbitMQ 代理将消息路由到目标队列。读取后，使用者向代理发送确认（ACK）回复，然后代理将消息从队列中删除。</p><p>与 RabbitMQ 不同，Apache Kafka 将消息附加到日志文件中，该日志文件将一直留存到其保留期到期。这样，使用者可以在规定的时间内随时重新处理流式传输的数据。</p><h2 id="Kafka-和-RabbitMQ功能对比"><a href="#Kafka-和-RabbitMQ功能对比" class="headerlink" title="Kafka 和 RabbitMQ功能对比"></a>Kafka 和 RabbitMQ功能对比</h2><table><thead><tr><th><strong>对比项</strong></th><th><strong>RabbitMQ</strong></th><th><strong>Kafka</strong></th></tr></thead><tbody><tr><td><strong>吞吐量</strong></td><td>低</td><td>高</td></tr><tr><td><strong>有序性</strong></td><td>全局有序性</td><td>分区有序性</td></tr><tr><td><strong>消息可靠性</strong></td><td>多策略组合</td><td>消息持久化</td></tr><tr><td><strong>流处理</strong></td><td>不支持</td><td>支持</td></tr><tr><td><strong>时效性</strong></td><td>高</td><td>中</td></tr><tr><td><strong>运维便捷度</strong></td><td>高</td><td>中</td></tr><tr><td><strong>系统依赖</strong></td><td>无</td><td>zookeeper</td></tr><tr><td><strong>Web监控</strong></td><td>自带</td><td>第三方</td></tr><tr><td><strong>优先级队列</strong></td><td>支持</td><td>不支持</td></tr><tr><td><strong>死信</strong></td><td>支持</td><td>不支持</td></tr><tr><td><strong>客户端支持</strong></td><td>支持多种语言</td><td></td></tr><tr><td><strong>社区生态</strong></td><td>好</td><td></td></tr><tr><td><strong>安全机制</strong></td><td>（TLS&#x2F;SSL、SASL）身份认证和（读写）权限控制</td><td></td></tr><tr><td><strong>消息回溯</strong></td><td>支持</td><td>不支持</td></tr></tbody></table><h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a><strong>性能</strong></h3><p>Kafka的诞生的是处理高并发日志的，吞吐量比较高，每秒请求数达到数十万量级</p><p>RabbitMQ每秒请求数则为万级别，有测试报告指出Kafka是RabbitMQ的10倍以上性能。</p><h3 id="有序性"><a href="#有序性" class="headerlink" title="有序性"></a><strong>有序性</strong></h3><p>RabbitMQ理论上是全局有序性的，但是由于【发后既忘】+【自动确认】机制的原因，如果在同个队列的多个消费者做相同的业务处理时，他们的各自的执行任务无法保证有序完成。如果确保100%有序可以使用【非自动确认】，但会影响消费性能。</p><p>Kafka支持分区有序性，如果对有序性有严格要求可以设置单个Partition，可是单个Partition并发性比较低，因此在多个Partition情况下可以根据业务指定key把相关的消息路由到同一个Partition，例如相同UserId行为信息可以到Partition 1进行处理。</p><h3 id="Kafka为什么快"><a href="#Kafka为什么快" class="headerlink" title="Kafka为什么快"></a><strong>Kafka为什么快</strong></h3><p>关键核心技术点：</p><ul><li>异步批量处理</li><li>磁盘顺序读写</li><li>操作系统PageCache缓存数据</li><li>零拷贝加速消费</li></ul><p>Kafka的诞生就是为了高并发日志处理的，那么在他整个机制里使用了很多批量、异步、缓存。例如生产者客户端，他会积累一定量（条数、大小）的消息，再批量的发给kafka broker，如果在这段时间客户端服务挂了，就等于消息丢失了。当broker接受到了消息后，还有一堆骚操作-异步刷盘，也就是生产者发送给broker之后他是记录在缓存的，每隔一段时间才会持久化到磁盘，假如这段真空期broker挂了，消息也是丢了。</p><h2 id="优缺点对比"><a href="#优缺点对比" class="headerlink" title="优缺点对比"></a>优缺点对比</h2><table><thead><tr><th></th><th>RabbitMQ</th><th>kafka</th></tr></thead><tbody><tr><td>优点</td><td>1、稳定可靠，数据不会丢失。<br>2、管理界面较丰富</td><td>1、这些方面表现很好：高吞吐、低延迟、高可用、集群热扩展、集群容错<br>2、producer端提供缓存、压缩功能，可节省性能，提高效率。<br>3、提供顺序消费能力<br>4、生态完善，在大数据处理方面有大量配套的设施。</td></tr><tr><td>缺点</td><td>1、在高吞吐量、高可用上较其他两者有所不如。<br><br>2. erlang 语言难度较大。基本只能依赖于开源社区的快速维护和修复bug，不利于做二次开发和维护<br>3、不支持事务<br><br>4、消息吞吐能力较差，消息堆积时，性能会明显降低</td><td>1、消息容易丢失，适合做日志系统，不适合做数据系统。<br><br>2、消费集群数目受到分区数目的限制。<br>2、单机topic多时，性能会明显降低。单机超过64个队列&#x2F;分区，Load会发生明显的飙高现象，队列越多，load越高，发送消息响应时间变长<br>3、不支持事务<br><br>4、支持消息顺序，但是一台代理宕机后，就会产生消息乱序；<br><br>5、消费失败不支持重试</td></tr></tbody></table><h2 id="如何选型"><a href="#如何选型" class="headerlink" title="如何选型"></a>如何选型</h2><p>RabbitMQ 和 Kafka 不是相互竞争的消息代理。两者都旨在支持不同使用案例中的数据交换，分别有其适用场景。下面有一些场景和选型建议：</p><ol><li><p><strong>事件流重放</strong></p><p>Kafka 适用于需要重新分析所接收数据的应用程序。可以在保留期内多次处理流式数据或收集日志文件进行分析。</p><p>使用 RabbitMQ 进行日志聚合更具挑战性，因为消息一旦使用就会被删除。解决方法是重放来自生产者的已存储消息。</p></li><li><p><strong>实时数据流式处理</strong></p><p>Kafka 以非常低的延迟流式传输消息，适用于实时分析流式数据。例如，可以将 Kafka 用作分布式监控服务，为在线事务处理实时发出提醒。</p></li><li><p><strong>复杂的路由架构</strong></p><p>RabbitMQ 为要求模糊或路由场景复杂的客户端提供灵活性。例如，可以将 RabbitMQ 设置为将数据路由到具有不同绑定和交换机的不同应用程序。</p></li><li><p><strong>有效的消息传输</strong></p><p>RabbitMQ 采用推送模型，这意味着生产者知悉客户端应用程序是否使用消息。该方法适用于在交换和分析数据时必须遵守特定顺序和传输保证的应用程序。</p></li></ol><p><strong>另外选型也可以从前面RabbitMQ 和 Kafka 的功能对比和优缺点对比上入手，根据我们实际业务需要做选择。</strong></p><h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol><li><a href="https://blog.51cto.com/knifeedge/5011115">https://blog.51cto.com/knifeedge/5011115</a></li><li><a href="https://aws.amazon.com/cn/compare/the-difference-between-rabbitmq-and-kafka/">https://aws.amazon.com/cn/compare/the-difference-between-rabbitmq-and-kafka/</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Kafka</tag>
+      
+      <tag>RabbitMQ</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>浅谈RPC</title>
+    <link href="/2024/01/04/%E6%B5%85%E8%B0%88RPC/"/>
+    <url>/2024/01/04/%E6%B5%85%E8%B0%88RPC/</url>
+    
+    <content type="html"><![CDATA[<p>RPC是什么</p><p>参考：</p><ol><li><a href="https://zhuanlan.zhihu.com/p/139688497">https://zhuanlan.zhihu.com/p/139688497</a></li><li><a href="https://bbs.huaweicloud.com/blogs/337073">https://bbs.huaweicloud.com/blogs/337073</a></li><li><a href="https://zhuanlan.zhihu.com/p/187560185">https://zhuanlan.zhihu.com/p/187560185</a></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>RPC</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>《Go 语言编码规范》学习笔记</title>
     <link href="/2024/01/01/%E3%80%8AGo-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/"/>
     <url>/2024/01/01/%E3%80%8AGo-%E8%AF%AD%E8%A8%80%E7%BC%96%E7%A0%81%E8%A7%84%E8%8C%83%E3%80%8B%E8%AF%BB%E4%B9%A6%E7%AC%94%E8%AE%B0/</url>
@@ -355,9 +407,21 @@
     <link href="/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/"/>
     <url>/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</url>
     
-    <content type="html"><![CDATA[]]></content>
+    <content type="html"><![CDATA[<h2 id="RabbitMQ简介"><a href="#RabbitMQ简介" class="headerlink" title="RabbitMQ简介"></a>RabbitMQ简介</h2><p>RabbitMQ 是由 erlang 语言开发，基于 AMQP（Advanced Message Queue 高级消息队列协议）协议实现的消息队列，它是一种应用程序之间的通信方法，消息队列在分布式系统开发中应用非常广泛。</p><p>官方地址：<a href="http://www.rabbitmq.com/">http://www.rabbitmq.com</a></p><p>官方教程：<a href="http://www.rabbitmq.com/getstarted.html">http://www.rabbitmq.com/getstarted.html</a></p><p>RabbitMQ 最初起源于金融系统，用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。具体特点包括：</p><ol><li>可靠性（Reliability）， RabbitMQ 使用一些机制来保证可靠性，如持久化、传输确认、发布确认。</li><li>灵活的路由（Flexible Routing）， 在消息进入队列之前，通过 Exchange 来路由消息的。对于典型的路由功能，RabbitMQ 已经提供了一些内置的 Exchange 来实现。针对更复杂的路由功能，可以将多个 Exchange 绑定在一起，也通过插件机制实现自己的 Exchange 。</li><li>消息集群（Clustering）， 多个 RabbitMQ 服务器可以组成一个集群，形成一个逻辑 Broker 。</li><li>高可用（Highly Available Queues）， 队列可以在集群中的机器上进行镜像，使得在部分节点出问题的情况下队列仍然可用。</li><li>多种协议（Multi-protocol）， RabbitMQ 支持多种消息队列协议，比如 STOMP、MQTT 等等。</li><li>多语言客户端（Many Clients），RabbitMQ 几乎支持所有常用语言，比如 Java、.NET、Ruby 等等。</li><li>管理界面（Management UI）， RabbitMQ 提供了一个易用的用户界面，使得用户可以监控和管理消息 Broker 的许多方面。</li><li>跟踪机制（Tracing），如果消息异常，RabbitMQ 提供了消息跟踪机制，使用者可以找出发生了什么。</li><li>插件机制（Plugin System）， RabbitMQ 提供了许多插件，来从多方面进行扩展，也可以编写自己的插件。</li></ol><h2 id="RabbitMQ的特点"><a href="#RabbitMQ的特点" class="headerlink" title="RabbitMQ的特点"></a>RabbitMQ的特点</h2><h2 id="RabbitMQ架构模型"><a href="#RabbitMQ架构模型" class="headerlink" title="RabbitMQ架构模型"></a>RabbitMQ架构模型</h2><p><img src="/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/_posts/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/e75977e48886167f5f00536338bfdc31.png" alt="img"></p><p><strong>Connection</strong></p><p>连接，作为客户端（无论是生产者还是消费者），你如果要与 RabbitMQ 通讯的话，你们之间必须创建一条 TCP 连接。</p><p><strong>Channel</strong></p><p>信道，是生产者&#x2F;消费者与 RabbitMQ 通信的渠道。信道是建立在 TCP 连接上的虚拟连接，什么意思呢？就是说 rabbitmq 在一条 TCP 上建立成百上千个信道来达到多个线程处理，这个 TCP 被多个线程共享，每个线程对应一个信道，信道在 RabbitMQ 都有唯一的 ID ,保证了信道私有性，对应上唯一的线程使用。</p><p><strong>为什么不建立多个 TCP 连接呢？</strong></p><p>因为对于操纵系统而言，建立和销毁 TCP 是非常昂贵的，系统为每个线程开辟一个 TCP 是非常消耗性能，每秒成百上千的建立销毁 TCP 会严重消耗系统。所以 rabbitmq 选择建立多个信道（建立在 tcp 的虚拟连接）连接到 rabbit 上。</p><p>从技术上讲，这被称之为多路复用，对于执行多个任务的多线程或者异步应用程序来说，它非常有用。</p><p><strong>Message</strong></p><p>消息，包含有效载荷和标签，有效载荷指要传输的数据，标签描述了有效载荷，并且 rabbitmq 用它来决定谁获得消息，消费者只能拿到有效载荷，并不知道生产者是谁。</p><p><strong>Producer</strong></p><p>生产者，消息的创建者，发送到 rabbitmq。</p><p><strong>Consumer</strong></p><p>消费者，消息的消费者，连接到 rabbitmq，订阅到队列上，消费消息，持续订阅和单条订阅。</p><p><strong>Broker</strong></p><p>代理服务，简单来说就是消息队列服务器实体，默认端口 5672。</p><p><strong>Routing Key</strong></p><p>路由规则，虚拟机用它来确认如何路由一个特定消息，即 Exchange 根据这个关键字进行消息投递。</p><p><strong>Binding</strong></p><p>Exchange 和 Queue 之间的虚拟连接，它的作用就是把 exchange 和 queue 按照路由规则绑定起来，Binding 中可以包括多个 Routing key。</p><p><strong>Queue</strong></p><p>消息队列，用来保存消息直到发送给消费者。它是消息的容器，也是消息的终点。一个消息可投入一个或多个队列。消息一直在队列里面，等待消费者连接到这个队列将其取走。</p><p><strong>交换机、队列、绑定、路由键之间的关系</strong>：</p><p>队列通过路由键绑定到交换机，生产者将消息发布到交换机，交换机根据绑定的路由键将消息路由到特定队列，然后由订阅这个队列的消费者进行接收。</p><p><img src="/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/_posts/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/67939e2621fab7bd4f471931f7c77172.png" alt="img"></p><p><strong>Virtual Host</strong></p><p>虚拟主机，表示一批交换器、消息队列和相关对象。虚拟主机是共享相同的身份认证和加密环境的独立服务器域。每个 vhost 本质上就是一个 mini 版的 RabbitMQ 服务器，拥有自己的队列、交换器、绑定和权限机制。vhost 是 AMQP 概念的基础，必须在连接时指定，RabbitMQ 默认的 vhost 是 &#x2F; ，通过缺省用户和口令 guest 进行访问。</p><p><img src="/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/_posts/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/a7cb7b74287615f6217097f85375dfb4.png" alt="img"></p><h2 id="Exchange交换器的类型"><a href="#Exchange交换器的类型" class="headerlink" title="Exchange交换器的类型"></a>Exchange交换器的类型</h2><p>Exchange分发消息时根据类型的不同分发策略有区别，目前共四种类型：direct、fanout、topic、headers，由于headers交换器和direct交换器完全一致，且性能差很多，目前几乎用不到。这里只看direct、fanout、topic这三种类型：</p><ol><li>direct（直连）：消息中的路由键（RoutingKey）如果和 Bingding 中的 bindingKey 完全匹配，交换器就将消息发到对应的队列中。是基于完全匹配、单播的模式。</li><li>fanout（广播）：把所有发送到fanout交换器的消息路由到所有绑定该交换器的队列中，fanout 类型转发消息是最快的。</li><li>topic（主题）：通过模式匹配的方式对消息进行路由，将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。匹配规则：<ul><li>RoutingKey 和 BindingKey 为一个 点号 ‘.’ 分隔的字符串。 比如: stock.usd.nyse；可以放任意的key在routing_key中，当然最长不能超过255 bytes。</li><li>BindingKey可使用 * 和 # 用于做模糊匹配：*匹配一个单词，#匹配0个或者多个单词</li></ul></li><li>headers：不依赖于路由键进行匹配，是根据发送消息内容中的headers属性进行匹配，除此之外 headers 交换器和 direct 交换器完全一致，但性能差很多，目前几乎用不到了。</li></ol><h2 id="RabbitMQ的几种模式"><a href="#RabbitMQ的几种模式" class="headerlink" title="RabbitMQ的几种模式"></a>RabbitMQ的几种模式</h2><p>RabbitMQ提供了6种模式：</p><ol><li>简单模式：一对一模式，只有一个生产者，一个队列，一个消费者，是最简单的模式。</li><li>工作队列模式：一对多模式，一个消息生产者，一个消息队列，多个消费者。</li><li>Publish&#x2F;Subscribe发布与订阅模式：无选择接收消息，一个消息生产者，一个交换器，多个消息队列，多个消费者。</li><li>Routing路由模式：在发布&#x2F;订阅模式的基础上，有选择的接收消息，也就是通过 routing 路由进行匹配条件是否满足接收消息。</li><li>Topics主题模式：同样是在发布&#x2F;订阅模式的基础上，根据主题匹配进行筛选是否接收消息，比第四类更灵活（也是最常用的一种）。</li><li>RPC远程调用模式（远程调用，不太算MQ；不作介绍）</li></ol><p>官网对应模式介绍：<a href="https://www.rabbitmq.com/getstarted.html">https://www.rabbitmq.com/getstarted.html</a></p><h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ol><li><p><a href="https://www.zhihu.com/question/51126804">https://www.zhihu.com/question/51126804</a></p></li><li><p><a href="https://xie.infoq.cn/article/ab5c07dbe3d5d7896ad44c65e">https://xie.infoq.cn/article/ab5c07dbe3d5d7896ad44c65e</a></p></li><li><p><a href="https://www.cnblogs.com/gygtech/p/14902161.html">https://www.cnblogs.com/gygtech/p/14902161.html</a></p></li><li><p><a href="https://www.cnblogs.com/tanghaorong/p/14914149.html#_label3">https://www.cnblogs.com/tanghaorong/p/14914149.html#_label3</a></p></li><li><p><a href="https://zq99299.github.io/mq-tutorial/rabbitmq-ac/">https://zq99299.github.io/mq-tutorial/rabbitmq-ac/</a></p></li></ol>]]></content>
     
     
+    <categories>
+      
+      <category>随笔</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>RabbitMQ</tag>
+      
+    </tags>
     
   </entry>
   
@@ -609,7 +673,7 @@
     
     <categories>
       
-      <category>随手记</category>
+      <category>随笔</category>
       
     </categories>
     
@@ -634,7 +698,7 @@
     
     <categories>
       
-      <category>随手记</category>
+      <category>随笔</category>
       
     </categories>
     
