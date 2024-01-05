@@ -16,18 +16,19 @@
   <meta name="author" content="cswuyp">
   <meta name="keywords" content="">
   
-    <meta name="description" content="RabbitMQ简介RabbitMQ 是由 erlang 语言开发，基于 AMQP（Advanced Message Queue 高级消息队列协议）协议实现的消息队列，它是一种应用程序之间的通信方法，消息队列在分布式系统开发中应用非常广泛。 官方地址：http:&#x2F;&#x2F;www.rabbitmq.com 官方教程：http:&#x2F;&#x2F;www.rabbitmq.com&#x2F;getstarted.html Rabbi">
+    <meta name="description" content="RabbitMQ入门RabbitMQ简介RabbitMQ 是由 erlang 语言开发，基于 AMQP（Advanced Message Queue 高级消息队列协议）协议实现的消息队列，它是一种应用程序之间的通信方法，消息队列在分布式系统开发中应用非常广泛。 官方地址：http:&#x2F;&#x2F;www.rabbitmq.com 官方教程：http:&#x2F;&#x2F;www.rabbitmq.com&#x2F;getstarted.">
 <meta property="og:type" content="article">
 <meta property="og:title" content="RabbitMQ学习笔记">
 <meta property="og:url" content="http://example.com/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
 <meta property="og:site_name" content="cswuyp&#39;s blog">
-<meta property="og:description" content="RabbitMQ简介RabbitMQ 是由 erlang 语言开发，基于 AMQP（Advanced Message Queue 高级消息队列协议）协议实现的消息队列，它是一种应用程序之间的通信方法，消息队列在分布式系统开发中应用非常广泛。 官方地址：http:&#x2F;&#x2F;www.rabbitmq.com 官方教程：http:&#x2F;&#x2F;www.rabbitmq.com&#x2F;getstarted.html Rabbi">
+<meta property="og:description" content="RabbitMQ入门RabbitMQ简介RabbitMQ 是由 erlang 语言开发，基于 AMQP（Advanced Message Queue 高级消息队列协议）协议实现的消息队列，它是一种应用程序之间的通信方法，消息队列在分布式系统开发中应用非常广泛。 官方地址：http:&#x2F;&#x2F;www.rabbitmq.com 官方教程：http:&#x2F;&#x2F;www.rabbitmq.com&#x2F;getstarted.">
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/_posts/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/e75977e48886167f5f00536338bfdc31.png">
 <meta property="og:image" content="http://example.com/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/_posts/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/67939e2621fab7bd4f471931f7c77172.png">
 <meta property="og:image" content="http://example.com/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/_posts/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/a7cb7b74287615f6217097f85375dfb4.png">
+<meta property="og:image" content="http://example.com/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200624165801409.b1306db4.png">
 <meta property="article:published_time" content="2023-12-20T09:20:38.000Z">
-<meta property="article:modified_time" content="2024-01-04T13:10:23.280Z">
+<meta property="article:modified_time" content="2024-01-05T09:53:16.693Z">
 <meta property="article:author" content="cswuyp">
 <meta property="article:tag" content="RabbitMQ">
 <meta name="twitter:card" content="summary_large_image">
@@ -224,7 +225,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          1.7k 字
+          4.9k 字
         
       </span>
     
@@ -235,7 +236,7 @@
         
         
         
-          15 分钟
+          41 分钟
         
       </span>
     
@@ -277,7 +278,7 @@
             
               <div class="markdown-body">
                 
-                <h2 id="RabbitMQ简介"><a href="#RabbitMQ简介" class="headerlink" title="RabbitMQ简介"></a>RabbitMQ简介</h2><p>RabbitMQ 是由 erlang 语言开发，基于 AMQP（Advanced Message Queue 高级消息队列协议）协议实现的消息队列，它是一种应用程序之间的通信方法，消息队列在分布式系统开发中应用非常广泛。</p>
+                <h1 id="RabbitMQ入门"><a href="#RabbitMQ入门" class="headerlink" title="RabbitMQ入门"></a>RabbitMQ入门</h1><h2 id="RabbitMQ简介"><a href="#RabbitMQ简介" class="headerlink" title="RabbitMQ简介"></a>RabbitMQ简介</h2><p>RabbitMQ 是由 erlang 语言开发，基于 AMQP（Advanced Message Queue 高级消息队列协议）协议实现的消息队列，它是一种应用程序之间的通信方法，消息队列在分布式系统开发中应用非常广泛。</p>
 <p>官方地址：<a target="_blank" rel="noopener" href="http://www.rabbitmq.com/">http://www.rabbitmq.com</a></p>
 <p>官方教程：<a target="_blank" rel="noopener" href="http://www.rabbitmq.com/getstarted.html">http://www.rabbitmq.com/getstarted.html</a></p>
 <p>RabbitMQ 最初起源于金融系统，用于在分布式系统中存储转发消息，在易用性、扩展性、高可用性等方面表现不俗。具体特点包括：</p>
@@ -341,7 +342,142 @@
 <li>RPC远程调用模式（远程调用，不太算MQ；不作介绍）</li>
 </ol>
 <p>官网对应模式介绍：<a target="_blank" rel="noopener" href="https://www.rabbitmq.com/getstarted.html">https://www.rabbitmq.com/getstarted.html</a></p>
+<h1 id="RabbitMQ进阶"><a href="#RabbitMQ进阶" class="headerlink" title="RabbitMQ进阶"></a>RabbitMQ进阶</h1><h2 id="过期时间TTL"><a href="#过期时间TTL" class="headerlink" title="过期时间TTL"></a>过期时间TTL</h2><p>Time to Live 简称 TTL，即过期时间。RabbitMQ 可以对 <strong>消息</strong> 和 <strong>队列</strong> 设置 TTL。</p>
+<h3 id="设置过期时间"><a href="#设置过期时间" class="headerlink" title="设置过期时间"></a>设置过期时间</h3><ul>
+<li>通过队列设置：队列中的消息都有相同的过期时间</li>
+<li>对消息本身设置：每条消息的 TTL 可以不同</li>
+</ul>
+<p>如果两种一起设置，则以最小的 TTL 生效。</p>
+<p>消息在队列中生存时间一旦超过 TTL，就会变成「死信（Dead Message）」，消费者将无法收到该消息。</p>
+<h3 id="在队列设置过期时间"><a href="#在队列设置过期时间" class="headerlink" title="在队列设置过期时间"></a>在队列设置过期时间</h3><p>定义队列时，通过参数 <code>x-message-ttl</code> 设置，单位是 <strong>毫秒</strong></p>
+<p>TTL 值的几种情况：</p>
+<ul>
+<li>值为 0 ：表示，除非此时可以直接将消息投递到消费者，否则该消息被立即丢弃</li>
+<li>大于 0：将在该时间内过期</li>
+</ul>
+<h3 id="在消息设置过期时间"><a href="#在消息设置过期时间" class="headerlink" title="在消息设置过期时间"></a>在消息设置过期时间</h3><p>此种方式当超过 TTL 时，并不会立即从队列中抹去，而是在投递消费者时判定的。而在队列上一旦过期，则立即从队列中抹去。</p>
+<p>这是因为内部实现的原因导致的：</p>
+<ul>
+<li>队列中已过期的消息肯定在队列头部，只要定期从队头开始扫描是否有过期的消息即可</li>
+<li>在消息中设置的过期，需要扫描整个队列。</li>
+</ul>
+<h3 id="死信队列"><a href="#死信队列" class="headerlink" title="死信队列"></a>死信队列</h3><p>Dead Letter Exchange 简称 DLX，可称为死信交换器，当消息在一个 队列中变成死信（dead message）之后，它能被重新发送到另一个交换器中，这个交换器就是DLX，绑定在 DLX 上的队列就称为 死信队列。</p>
+<p>消息变成死信一般有以下几种情况：</p>
+<ul>
+<li><p>消息被拒绝，并设置 requeue 参数未 false</p>
+<p><code>Basic.Reject 或 Basic.Nack</code></p>
+</li>
+<li><p>消息过期</p>
+</li>
+<li><p>队列达到最大长度</p>
+</li>
+</ul>
+<p>DLX 是一个普通的交换器，可以在任何队列上设置，当死信消息出现时，RabbitMQ 自动将这个 消息重新发布到设置的 DLX 上，从而被路由到另一个队列，即 死信队列。</p>
+<h3 id="延迟队列"><a href="#延迟队列" class="headerlink" title="延迟队列"></a>延迟队列</h3><p>在 AMQP 协议或 RabbitMQ 中，本身没有直接支持延迟队列的功能。可以 通过 DLX 和 TTL 模拟出延迟队列的功能。</p>
+<p><img src="/2023/12/20/RabbitMQ%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/image-20200624165801409.b1306db4.png" srcset="/img/loading.gif" lazyload alt="image-20200624165801409"></p>
+<p>上图是死信队列的用法，也是延迟队列的用法。唯一不同的是，消费者订阅的是 <strong>死信队列</strong>，没有消费者订阅普通队列的话，当消息过期时间到了，就会被路由到死信队列，这就达成了，消息被延迟消费的目的。</p>
+<h3 id="优先级队列"><a href="#优先级队列" class="headerlink" title="优先级队列"></a>优先级队列</h3><p>优先级高的消息具备 优先被消费的特权。</p>
+<p>在定义队列时，可通过参数 <code>x-max-priority</code> 来指声明此队列的最大优先级别。在发送消息时，给消息设置的最大级别不能超过这个值</p>
+<h3 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h3><p>持久化可以提高 RabbitMQ 的可靠性，防止在异常情况（重启、关闭、宕机等）下的数据丢失。</p>
+<p>RabbitMQ 的持久化分为三个部分：</p>
+<ul>
+<li><p>交换器的持久化</p>
+<p>在声明交换器是将 durable 参数设置为 true 实现，如果不持久化，RabbitMQ 服务重启之后，相关的<strong>交换器元数据会丢失</strong>（没有这个交换器了），但是 <strong>队列和消息不会丢失</strong>（分情况是否设置持久化），只是 <strong>不能将消息发送到这个交换器</strong>了。</p>
+</li>
+<li><p>队列的持久化</p>
+<p>在声明队列时将 durable 参数设置为 true 实现，如果不持久化，RabbitMQ 服务重启之后，相关的 <strong>元数据会丢失</strong>，<strong>消息也会丢失</strong>；</p>
+</li>
+<li><p>消息的持久化</p>
+<p>但是队列的持久化，并 <strong>不能保证消息数据不丢失</strong>，要保证消息不丢失，需要将消息的投递模式设置为 2 （BasicProperties 中的 deliveryMode 属性）</p>
+</li>
+</ul>
+<p>不是所有的消息都设置持久化，在一些对可靠性要求不是那么高的消息，可以不采用持久化。这样可以提高整体的吞吐量。</p>
+<p>交换器、队列、消息都设置为持久化，也有可能丢失，有以下一个方面：</p>
+<ul>
+<li><p>autoAck ：自动确认</p>
+<p>在业务系统中，自动确认是最容易丢失的，如果处理过程中发生异常，消息可能就丢了。</p>
+<p>解决方案：改成手动 ack</p>
+</li>
+<li><p>数据刷盘：RabbitMQ 依赖内核的 fsync 函数存盘</p>
+<p>关于 fsync 函数，自己百度；大概就是数据先写缓存，等待缓存写满，或则内核需要重用缓存时，会将该缓存排入输出队列，进而同步到设备上。</p>
+<p>服务器突然断电，就有可能导致丢失一部分数据；</p>
+<p>解决方案：可以使用 RabbitMQ 的镜像队列机制（后面章节会讲解），相当于配置了副本，master 挂掉，会自动切换到 slave 节点，保证了高可用性。</p>
+</li>
+</ul>
+<p>还可以在发送端引 <strong>入事物机制</strong> 或 <strong>发送方确认机制</strong> 来保证消息已经正确发送并存储至 RabbitMQ 中。</p>
+<h3 id="生产端"><a href="#生产端" class="headerlink" title="生产端"></a>生产端</h3><p>小生产者将消息发送出去之后，消息到底有没有正确到达服务器？如果不进行特殊配置，默认情况下发送消息的操作是不会返回任何信息给生产者的。也就是说默认情况下，生产者不知道消息是否正确到达服务器。</p>
+<p>RabbitMQ 针对这个问题，提供了两种解决方式：</p>
+<ol>
+<li><p>事物机制</p>
+</li>
+<li><p>发送方确认（publisher confirm）机制</p>
+</li>
+</ol>
+<h3 id="消费端"><a href="#消费端" class="headerlink" title="消费端"></a>消费端</h3><p>消费者客户端可以通过 <strong>推模式</strong> 和 <strong>拉模式</strong> 来获取并消费消息，RabbitMQ 把消息推送后（或客户端主动 ACK）后，RabbitMQ 把当前消息从队列中标记清除。如果由于某些原因无法处理当前接受到的信息，可以通过 <code>channel.basicNack</code> 或则 <code>channel.basicReject</code> 来拒绝掉。</p>
+<p>对于消费者来说，还有几点需要注意：</p>
+<ol>
+<li><p>消息分发</p>
+</li>
+<li><p>消息顺序性</p>
+</li>
+<li><p>弃用 QueueingConsumer</p>
+</li>
+</ol>
+<h1 id="RabbitMQ常见问题与解决方案"><a href="#RabbitMQ常见问题与解决方案" class="headerlink" title="RabbitMQ常见问题与解决方案"></a>RabbitMQ常见问题与解决方案</h1><h2 id="RabbitMQ如何保证消息的可靠性"><a href="#RabbitMQ如何保证消息的可靠性" class="headerlink" title="RabbitMQ如何保证消息的可靠性"></a>RabbitMQ如何保证消息的可靠性</h2><p>消息的传播链路：</p>
+<pre><code class=" mermaid">graph LR
+生产者-- 生产 ---&gt;RabbitMQ --消费 ---&gt; 消费者
+</code></pre>
+
+
+
+<p><strong>RabbitMQ消息丢失有3种情况：</strong></p>
+<ol>
+<li><p><strong>生产者弄丢消息的解决方法</strong></p>
+<p>方法一：生产者在发送数据之前开启RabbitMQ的事务(采用该种方法由于事务机制，会导致吞吐量下降，太消耗性能，不太推荐。)</p>
+<p>方法二：开启confirm模式(使用springboot时在application.yml配置文件中做如下配置，实现confirm回调接口，生产者发送消息时设置confirm回调)</p>
+<p>总结：事务机制和 confirm机制最大的不同在于，事务机制是同步的，你提交一个事务之后会阻塞在那儿，但是 confirm机制是异步的，你发送个消息之后就可以发送下一个消息，RabbitMQ 接收了之后会异步回调confirm接口通知你这个消息接收到了。一般在生产者这块避免数据丢失，建议使用用 confirm 机制。</p>
+</li>
+<li><p><strong>MQ自身弄丢消息的解决方法</strong></p>
+<p>方法一：创建queue时设置为持久化队列，这样可以保证RabbitMQ持久化queue的元数据，此时还是不会持久化queue里的数据。</p>
+<p>方法二：发送消息时将消息的deliveryMode设置为持久化，此时queue中的消息才会持久化到磁盘。</p>
+<p>总结：同时设置queue和message持久化以后，RabbitMQ 挂了再次重启，也会从磁盘上重启恢复 queue，恢复这个 queue 里的数据，保证数据不会丢失。但是就算开启持久化机制，也有可能出现上面说的的消息落盘时服务挂掉的情况。这时可以考虑结合生产者的confirm机制来处理，持久化机制开启后消息只有成功落盘时才会通过confirm回调通知生产者，所以可以考虑生产者在生产消息时维护一个正在等待消息发送确认的队列，如果超过一定时间还没从confirm中收到对应消息的反馈，自动进行重发处理。</p>
+</li>
+<li><p><strong>消费者弄丢消息解决方法</strong></p>
+<p>方法：关闭自动ACK，使用手动ACK。RabbitMQ中有一个ACK机制，默认情况下消费者接收到到消息，RabbitMQ会自动提交ACK，之后这条消息就不会再发送给消费者了。我们可以更改为手动ACK模式，每次处理完消息之后，再手动ack一下。不过这样可能会出现刚处理完还没手动ack确认，消费者挂了，导致消息重复消费，不过我们只需要保证幂等性就好了，重复消费也不会造成问题。</p>
+</li>
+</ol>
+<h2 id="RabbitMQ如何保证消息幂等"><a href="#RabbitMQ如何保证消息幂等" class="headerlink" title="RabbitMQ如何保证消息幂等"></a>RabbitMQ如何保证消息幂等</h2><p>如何保证消息队列消费的幂等性，这一块应该还是要结合业务来选择合适的方法，有以下几个方案：</p>
+<ol>
+<li><p>消费数据为了单纯的写入数据库，可以先根据主键查询数据是否已经存在，如果已经存在了就没必要插入了。或者直接插入也没问题，因为可以利用主键的唯一性来保证数据不会重复插入，重复插入只会报错，但不会出现脏数据。</p>
+</li>
+<li><p>消费数据只是为了缓存到redis当中，这种情况就是直接往redis中set value了，天然的幂等性。</p>
+</li>
+<li><p>针对复杂的业务情况，可以在生产消息的时候给每个消息加一个全局唯一ID，消费者消费消息时根据这个ID去redis当中查询之前是否消费过。如果没有消费过，就进行消费并将这个消息的ID写入到redis当中。如果已经消费过了，就无需再次消费了。</p>
+</li>
+</ol>
+<h2 id="RabbitMQ如何保证消息的顺序"><a href="#RabbitMQ如何保证消息的顺序" class="headerlink" title="RabbitMQ如何保证消息的顺序"></a>RabbitMQ如何保证消息的顺序</h2><h3 id="出现消费顺序错乱的情况"><a href="#出现消费顺序错乱的情况" class="headerlink" title="出现消费顺序错乱的情况"></a>出现消费顺序错乱的情况</h3><ol>
+<li>为了提高处理效率，一个queue存在多个consumer</li>
+<li>一个queue只存在一个consumer，但是为了提高处理效率，consumer中使用了多线程进行处理</li>
+</ol>
+<h3 id="保证消息顺序消费的方法"><a href="#保证消息顺序消费的方法" class="headerlink" title="保证消息顺序消费的方法"></a>保证消息顺序消费的方法</h3><ol>
+<li><p>将原来的一个queue拆分成多个queue，每个queue都有一个自己的consumer。该种方案的核心是生产者在投递消息的时候根据业务数据关键值（例如订单ID哈希值对订单队列数取模）来将需要保证先后顺序的同一类数据（同一个订单的数据） 发送到同一个queue当中。</p>
+</li>
+<li><p>一个queue就一个consumer，在consumer中维护多个内存队列，根据业务数据关键值（例如订单ID哈希值对内存队列数取模）将消息加入到不同的内存队列中，然后多个真正负责处理消息的线程去各自对应的内存队列当中获取消息进行消费。</p>
+</li>
+</ol>
+<h3 id="RabbitMQ保证消息顺序性总结"><a href="#RabbitMQ保证消息顺序性总结" class="headerlink" title="RabbitMQ保证消息顺序性总结"></a>RabbitMQ保证消息顺序性总结</h3><p>核心思路就是根据业务数据关键值划分成多个消息集合，而且每个消息集合中的消息数据都是有序的，每个消息集合有自己独立的一个consumer。多个消息集合的存在保证了消息消费的效率，每个有序的消息集合对应单个的consumer也保证了消息消费时的有序性。</p>
+<p>如果业务又要顺序消费，又要增加并发，通常思路就是开启多个队列，业务根据规则将消息分发到不同的队列，通过增加队列的数量来提高并发度，例如：电商订单场景，只需要保证同一个用户的订单消息的顺序性就行，不同用户之间没有关系，所以只要让同一个用户的订单消息进入同一个队列就行，其他用户的订单消息，可以进入不同的队列。</p>
+<h2 id="如何确保消息不丢失"><a href="#如何确保消息不丢失" class="headerlink" title="如何确保消息不丢失"></a>如何确保消息不丢失</h2><p>消息持久化的前提是：将交换器&#x2F;队列的durable属性设置为true，表示交换器&#x2F;队列是持久交换器&#x2F;队列，在服务器崩溃或重启之后不需要重新创建交换器&#x2F;队列（交换器&#x2F;队列会自动创建）。</p>
+<p> 如果消息想要从Rabbit崩溃中恢复，那么消息必须：</p>
+<ul>
+<li>在消息发布前，通过把它的 “投递模式” 选项设置为2（持久）来把消息标记成持久化</li>
+<li>将消息发送到持久交换器</li>
+<li>消息到达持久队列</li>
+</ul>
+<p>RabbitMQ确保持久性消息能从服务器重启中恢复的方式是，将它们写入磁盘上的一个持久化日志文件，当发布一条持久性消息到持久交换器上时，Rabbit会在消息提交到日志文件后才发送响应（如果消息路由到了非持久队列，它会自动从持久化日志中移除）。一旦消费者从持久队列中消费了一条持久化消息，RabbitMQ会在持久化日志中把这条消息标记为等待垃圾收集。如果持久化消息在被消费之前RabbitMQ重启，那么Rabbit会自动重建交换器和队列（以及绑定），并重播持久化日志文件中的消息到合适的队列或者交换器上。</p>
 <h2 id="参考："><a href="#参考：" class="headerlink" title="参考："></a>参考：</h2><ol>
+<li><p><a target="_blank" rel="noopener" href="https://www.rabbitmq.com/documentation.html">https://www.rabbitmq.com/documentation.html</a></p>
+</li>
 <li><p><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/51126804">https://www.zhihu.com/question/51126804</a></p>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://xie.infoq.cn/article/ab5c07dbe3d5d7896ad44c65e">https://xie.infoq.cn/article/ab5c07dbe3d5d7896ad44c65e</a></p>
@@ -351,6 +487,14 @@
 <li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/tanghaorong/p/14914149.html#_label3">https://www.cnblogs.com/tanghaorong/p/14914149.html#_label3</a></p>
 </li>
 <li><p><a target="_blank" rel="noopener" href="https://zq99299.github.io/mq-tutorial/rabbitmq-ac/">https://zq99299.github.io/mq-tutorial/rabbitmq-ac/</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://learnku.com/articles/39963">https://learnku.com/articles/39963</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://juejin.cn/post/6844904125935665160">https://juejin.cn/post/6844904125935665160</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://rabbitmq.mr-ping.com/AMQP/AMQP_0-9-1_Model_Explained.html">https://rabbitmq.mr-ping.com/AMQP/AMQP_0-9-1_Model_Explained.html</a></p>
+</li>
+<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/hello-/articles/10345021.html">https://www.cnblogs.com/hello-/articles/10345021.html</a></p>
 </li>
 </ol>
 
