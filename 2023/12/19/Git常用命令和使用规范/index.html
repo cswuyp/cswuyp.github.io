@@ -24,7 +24,7 @@
 <meta property="og:description" content="一、Git常用命令列表 git config： 设置 Git 配置值 设置 Git 用户名 创建 Git 别名 设置 Git 编辑器 列出 Git 配置属性  git init ： 创建一个新的 Git 仓库  git clone ： 克隆一个 Git 仓库  git add： 添加文件内容到暂存区 添加单个文件 添加多个文件 添加所有文件 添加删除和修改的文件 在当前目录中添加文件 添加具有特定">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2023-12-19T07:42:41.000Z">
-<meta property="article:modified_time" content="2024-01-02T08:46:01.254Z">
+<meta property="article:modified_time" content="2024-01-12T03:17:36.259Z">
 <meta property="article:author" content="cswuyp">
 <meta property="article:tag" content="git">
 <meta name="twitter:card" content="summary_large_image">
@@ -220,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.1k 字
+          2.2k 字
         
       </span>
     
@@ -231,7 +231,7 @@
         
         
         
-          18 分钟
+          19 分钟
         
       </span>
     
@@ -535,7 +535,7 @@
 </ol>
 <h2 id="三、Git命令使用规范和建议"><a href="#三、Git命令使用规范和建议" class="headerlink" title="三、Git命令使用规范和建议"></a>三、Git命令使用规范和建议</h2><ol>
 <li><p>回滚提交时，用<code>git revert</code>代替<code>git reset</code></p>
-<p>git reset命令撤消 Git 存储库提交。撤消的提交可以从存储库中永久删除，这个命令的好处是提交会被永久删除，坏处也是提交会被永久删除，后续如果我们要回滚到对应的提交就办法做到了。如果我们有需要回滚到指定的提交，建议使用<code>git revert</code>，git revert不会删除任何提交记录，这样子能保证每一次的修改和提交都有记录可查。</p>
+<p>git reset命令撤消 Git 存储库提交。撤消的提交可以从存储库中永久删除，这个命令的好处是提交会被永久删除，坏处也是提交会被永久删除，后续如果我们要回滚到对应的提交就办法做到了。如果我们有需要回滚到指定的提交，建议使用<code>git revert</code>，git revert不会删除任何提交记录，这样子能保证每一次的修改和提交都有记录可查。git revert只能回滚一个分支，如果觉得麻烦也可以先合并想要回滚的分支git rebase然后再回滚合并后到分支，这样子就可以一次会退多个分支的代码同时也都有提交记录可查。</p>
 </li>
 </ol>
 <p>参考：</p>

@@ -16,19 +16,22 @@
   <meta name="author" content="cswuyp">
   <meta name="keywords" content="">
   
-    <meta property="og:type" content="article">
-<meta property="og:title" content="MongoDB学习笔记">
-<meta property="og:url" content="http://example.com/2023/12/20/MongoDB%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.html">
+    <meta name="description" content="参考：https:&#x2F;&#x2F;cloud.tencent.com&#x2F;developer&#x2F;article&#x2F;2020911">
+<meta property="og:type" content="article">
+<meta property="og:title" content="深入理解Go Modules的go.mod与go.sum">
+<meta property="og:url" content="http://example.com/2024/01/11/%E6%B7%B1%E5%85%A5%E7%90%86%E8%A7%A3Go-Modules%E7%9A%84go-mod%E4%B8%8Ego-sum/index.html">
 <meta property="og:site_name" content="cswuyp&#39;s blog">
+<meta property="og:description" content="参考：https:&#x2F;&#x2F;cloud.tencent.com&#x2F;developer&#x2F;article&#x2F;2020911">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-12-20T08:42:59.000Z">
-<meta property="article:modified_time" content="2024-01-12T11:14:07.965Z">
+<meta property="article:published_time" content="2024-01-11T03:38:31.000Z">
+<meta property="article:modified_time" content="2024-01-11T03:39:15.021Z">
 <meta property="article:author" content="cswuyp">
+<meta property="article:tag" content="Golang">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>MongoDB学习笔记 - cswuyp&#39;s blog</title>
+  <title>深入理解Go Modules的go.mod与go.sum - cswuyp&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -194,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="MongoDB学习笔记"></span>
+            <span id="subtitle" data-typed-text="深入理解Go Modules的go.mod与go.sum"></span>
           
         </div>
 
@@ -205,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-12-20 16:42" pubdate>
-          2023年12月20日 下午
+        <time datetime="2024-01-11 11:38" pubdate>
+          2024年1月11日 中午
         </time>
       </span>
     
@@ -217,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          0 字
+          2 字
         
       </span>
     
@@ -265,12 +268,13 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">MongoDB学习笔记</h1>
+            <h1 id="seo-header">深入理解Go Modules的go.mod与go.sum</h1>
             
             
               <div class="markdown-body">
                 
-                
+                <p>参考：<a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/2020911">https://cloud.tencent.com/developer/article/2020911</a></p>
+
                 
               </div>
             
@@ -278,6 +282,34 @@
             <div>
               <div class="post-metas my-3">
   
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/Golang/" class="print-no-link">#Golang</a>
+      
+    </div>
   
 </div>
 
@@ -289,9 +321,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/12/20/MySQL%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/" title="MySQL学习笔记">
+                      <a href="/2024/01/12/MongoDB%E7%B4%A2%E5%BC%95%E5%BA%95%E5%B1%82%E5%AE%9E%E7%8E%B0%E5%8E%9F%E7%90%86%E5%88%86%E6%9E%90/" title="MongoDB索引底层实现原理分析">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">MySQL学习笔记</span>
+                        <span class="hidden-mobile">MongoDB索引底层实现原理分析</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -299,8 +331,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/12/19/Git%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4%E5%92%8C%E4%BD%BF%E7%94%A8%E8%A7%84%E8%8C%83/" title="Git常用命令和使用规范">
-                        <span class="hidden-mobile">Git常用命令和使用规范</span>
+                      <a href="/2024/01/10/%E5%9C%A8Golang%E4%B8%AD%E4%BD%BF%E7%94%A8MongoDB%E7%9A%84%E4%BA%8B%E5%8A%A1/" title="在Golang中使用MongoDB的事务">
+                        <span class="hidden-mobile">在Golang中使用MongoDB的事务</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
