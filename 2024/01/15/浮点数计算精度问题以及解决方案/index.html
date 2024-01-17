@@ -16,23 +16,22 @@
   <meta name="author" content="cswuyp">
   <meta name="keywords" content="">
   
-    <meta name="description" content="架构差异RabbitMQ 和 Apache Kafka 均允许生产者向使用者发送消息。生产者是发布信息的应用程序，而使用者是订阅和处理信息的应用程序。 在 RabbitMQ 和 Kafka 中，生产者和使用者的互动方式有所不同。在 RabbitMQ 中，生产者发送并监控消息是否到达目标使用者。另一方面，无论使用者是否检索消息，Kafka 生产者都会向队列发布消息。 可以将 RabbitMQ 视为接">
+    <meta name="description" content="经典案例下面的代码输出的结果回事什么呢？ 1234567891011121314package mainimport (	&quot;fmt&quot;)func main() &#123;	var a, b float64	a &#x3D; 1.01	b &#x3D; 2.09	fmt.Println(a + b)&#125;  有算数基础的人可能都会说是3.1，但是上面的代码在我的电脑执行结果输出的结果却是:3.">
 <meta property="og:type" content="article">
-<meta property="og:title" content="RabbitMQ和Kafka对比">
-<meta property="og:url" content="http://example.com/2024/01/04/RabbitMQ%E5%92%8CKafka%E5%AF%B9%E6%AF%94/index.html">
+<meta property="og:title" content="浮点数计算精度问题以及解决方案">
+<meta property="og:url" content="http://example.com/2024/01/15/%E6%B5%AE%E7%82%B9%E6%95%B0%E8%AE%A1%E7%AE%97%E7%B2%BE%E5%BA%A6%E9%97%AE%E9%A2%98%E4%BB%A5%E5%8F%8A%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/index.html">
 <meta property="og:site_name" content="cswuyp&#39;s blog">
-<meta property="og:description" content="架构差异RabbitMQ 和 Apache Kafka 均允许生产者向使用者发送消息。生产者是发布信息的应用程序，而使用者是订阅和处理信息的应用程序。 在 RabbitMQ 和 Kafka 中，生产者和使用者的互动方式有所不同。在 RabbitMQ 中，生产者发送并监控消息是否到达目标使用者。另一方面，无论使用者是否检索消息，Kafka 生产者都会向队列发布消息。 可以将 RabbitMQ 视为接">
+<meta property="og:description" content="经典案例下面的代码输出的结果回事什么呢？ 1234567891011121314package mainimport (	&quot;fmt&quot;)func main() &#123;	var a, b float64	a &#x3D; 1.01	b &#x3D; 2.09	fmt.Println(a + b)&#125;  有算数基础的人可能都会说是3.1，但是上面的代码在我的电脑执行结果输出的结果却是:3.">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2024-01-04T12:46:57.000Z">
-<meta property="article:modified_time" content="2024-01-04T13:11:58.955Z">
+<meta property="article:published_time" content="2024-01-15T09:20:44.000Z">
+<meta property="article:modified_time" content="2024-01-17T02:28:50.227Z">
 <meta property="article:author" content="cswuyp">
-<meta property="article:tag" content="RabbitMQ">
-<meta property="article:tag" content="Kafka">
+<meta property="article:tag" content="浮点数">
 <meta name="twitter:card" content="summary_large_image">
   
   
   
-  <title>RabbitMQ和Kafka对比 - cswuyp&#39;s blog</title>
+  <title>浮点数计算精度问题以及解决方案 - cswuyp&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -198,7 +197,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="RabbitMQ和Kafka对比"></span>
+            <span id="subtitle" data-typed-text="浮点数计算精度问题以及解决方案"></span>
           
         </div>
 
@@ -209,8 +208,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2024-01-04 20:46" pubdate>
-          2024年1月4日 晚上
+        <time datetime="2024-01-15 17:20" pubdate>
+          2024年1月15日 下午
         </time>
       </span>
     
@@ -221,7 +220,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          2.4k 字
+          415 字
         
       </span>
     
@@ -232,7 +231,7 @@
         
         
         
-          21 分钟
+          4 分钟
         
       </span>
     
@@ -269,169 +268,29 @@
       <div class="container nopadding-x-md" id="board-ctn">
         <div id="board">
           <article class="post-content mx-auto">
-            <h1 id="seo-header">RabbitMQ和Kafka对比</h1>
+            <h1 id="seo-header">浮点数计算精度问题以及解决方案</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="架构差异"><a href="#架构差异" class="headerlink" title="架构差异"></a>架构差异</h2><p>RabbitMQ 和 Apache Kafka 均允许生产者向使用者发送消息。<em>生产者</em>是发布信息的应用程序，而<em>使用者</em>是订阅和处理信息的应用程序。</p>
-<p>在 RabbitMQ 和 Kafka 中，生产者和使用者的互动方式有所不同。在 RabbitMQ 中，生产者发送并监控消息是否到达目标使用者。另一方面，无论使用者是否检索消息，Kafka 生产者都会向队列发布消息。</p>
-<p>可以将 RabbitMQ 视为接收邮件并将其传输给预定收件人的邮局。与此同时，Kafka 类似于图书馆，它在书架上整理生产者发布的不同类型消息。然后，使用者读取相应书架上的消息，并记住他们所读取的内容。 </p>
-<h3 id="RabbitMQ-架构方法"><a href="#RabbitMQ-架构方法" class="headerlink" title="RabbitMQ 架构方法"></a><strong>RabbitMQ 架构方法</strong></h3><p>RabbitMQ 代理允许使用以下组件进行低延迟和复杂的消息分配：</p>
-<ul>
-<li><em>交换机</em>接收来自生产者的消息并确定应将它们路由到何处</li>
-<li><em>队列</em>是接收来自交换机的消息并将其发送给使用者的存储空间</li>
-<li><em>绑定</em>是连接交换机和代理的路径</li>
-</ul>
-<p>在 RabbitMQ 中，<em>路由密钥</em>是一种消息属性，用于将消息从交换机路由到特定队列。当生产者向交换机发送消息时，它会将路由密钥作为消息的一部分包含在内。然后，交换机使用此路由密钥来确定消息应传输到哪个队列。</p>
-<h3 id="Kafka-架构方法"><a href="#Kafka-架构方法" class="headerlink" title="Kafka 架构方法"></a><strong>Kafka 架构方法</strong></h3><p>Kafka 集群通过更复杂的架构提供高吞吐量流事件处理。以下是 Kafka 的一些关键组件：</p>
-<ul>
-<li><em>Kafka 代理</em>是 Kafka 服务器，允许生产者将数据流式传输给使用者。 Kafka 代理包含主题及其相应的分区。 </li>
-<li><em>主题</em>是在 Kafka 代理中对相似数据进行分组的数据存储。 </li>
-<li><em>分区</em>是使用者所订阅主题中较小的数据存储空间。 </li>
-<li>ZooKeeper 是特殊的软件，用于管理 Kafka 集群和分区以提供容错流式处理。ZooKeeper 最近被 Apache Kafka Raft（KRaft）协议所取代。</li>
-</ul>
-<p>Kafka 中的生产者为每条消息分配一个消息密钥。然后，Kafka 代理将消息存储在该特定主题的前导分区中。KRaft 协议使用共识算法来确定前导分区。 </p>
-<h2 id="处理消息方式"><a href="#处理消息方式" class="headerlink" title="处理消息方式"></a>处理消息方式</h2><p>RabbitMQ 和 Apache Kafka 以不同的方式将数据从生产者转移到使用者。RabbitMQ 是通用消息代理，它优先考虑端到端消息传输。Kafka 是分布式事件流式处理平台，支持持续大数据的实时交换。</p>
-<p>RabbitMQ 和 Kafka 针对不同的使用案例而设计，因此它们处理消息的方式有所不同。 接下来，我们讨论一些具体的差异。</p>
-<h3 id="消息使用"><a href="#消息使用" class="headerlink" title="消息使用"></a><strong>消息使用</strong></h3><p>在 RabbitMQ 中，代理确保使用者收到消息。使用者应用程序扮演被动角色，等待 RabbitMQ 代理将消息推送到队列中。例如，银行应用程序可能会等待来自中央交易处理软件的短信提醒。</p>
-<p>然而，Kafka 使用者更积极地读取和跟踪信息。当消息加入实体日志文件时，Kafka 使用者会跟踪他们读取的最后一条消息，并相应地更新偏移跟踪器。偏移跟踪器是读取消息后递增的计数器。使用 Kafka，生产者并不知道使用者会检索消息。 </p>
-<h3 id="消息优先级"><a href="#消息优先级" class="headerlink" title="消息优先级"></a><strong>消息优先级</strong></h3><p>RabbitMQ 代理允许生产者软件使用优先队列升级某些消息。代理不是按<em>先入先出</em>的顺序发送消息，而是先处理更高优先级的消息，然后再处理普通消息。例如，零售应用程序可能每小时将销售交易排队一次。但是，如果系统管理员发出优先的备份数据库消息，则代理会立即发送该消息。</p>
-<p>与 RabbitMQ 不同，Apache Kafka 不支持优先级队列。将所有消息分配到各自的分区时，该代理平等对待这些消息。 </p>
-<h3 id="消息排序"><a href="#消息排序" class="headerlink" title="消息排序"></a><strong>消息排序</strong></h3><p>RabbitMQ 按特定顺序发送消息和对其进行排队。除非有更高优先级的消息排入系统，否则使用者会按照消息的发送顺序接收消息。</p>
-<p>同时，Kafka 使用主题和分区对消息进行排队。当生产者发送消息时，消息会进入特定的主题和分区。由于 Kafka 不支持直接的生产者与使用者交换，因此使用者以不同的顺序从分区中拉取消息。 </p>
-<h3 id="消息删除"><a href="#消息删除" class="headerlink" title="消息删除"></a><strong>消息删除</strong></h3><p>RabbitMQ 代理将消息路由到目标队列。读取后，使用者向代理发送确认（ACK）回复，然后代理将消息从队列中删除。</p>
-<p>与 RabbitMQ 不同，Apache Kafka 将消息附加到日志文件中，该日志文件将一直留存到其保留期到期。这样，使用者可以在规定的时间内随时重新处理流式传输的数据。</p>
-<h2 id="Kafka-和-RabbitMQ功能对比"><a href="#Kafka-和-RabbitMQ功能对比" class="headerlink" title="Kafka 和 RabbitMQ功能对比"></a>Kafka 和 RabbitMQ功能对比</h2><table>
-<thead>
-<tr>
-<th><strong>对比项</strong></th>
-<th><strong>RabbitMQ</strong></th>
-<th><strong>Kafka</strong></th>
-</tr>
-</thead>
-<tbody><tr>
-<td><strong>吞吐量</strong></td>
-<td>低</td>
-<td>高</td>
-</tr>
-<tr>
-<td><strong>有序性</strong></td>
-<td>全局有序性</td>
-<td>分区有序性</td>
-</tr>
-<tr>
-<td><strong>消息可靠性</strong></td>
-<td>多策略组合</td>
-<td>消息持久化</td>
-</tr>
-<tr>
-<td><strong>流处理</strong></td>
-<td>不支持</td>
-<td>支持</td>
-</tr>
-<tr>
-<td><strong>时效性</strong></td>
-<td>高</td>
-<td>中</td>
-</tr>
-<tr>
-<td><strong>运维便捷度</strong></td>
-<td>高</td>
-<td>中</td>
-</tr>
-<tr>
-<td><strong>系统依赖</strong></td>
-<td>无</td>
-<td>zookeeper</td>
-</tr>
-<tr>
-<td><strong>Web监控</strong></td>
-<td>自带</td>
-<td>第三方</td>
-</tr>
-<tr>
-<td><strong>优先级队列</strong></td>
-<td>支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td><strong>死信</strong></td>
-<td>支持</td>
-<td>不支持</td>
-</tr>
-<tr>
-<td><strong>客户端支持</strong></td>
-<td>支持多种语言</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>社区生态</strong></td>
-<td>好</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>安全机制</strong></td>
-<td>（TLS&#x2F;SSL、SASL）身份认证和（读写）权限控制</td>
-<td></td>
-</tr>
-<tr>
-<td><strong>消息回溯</strong></td>
-<td>支持</td>
-<td>不支持</td>
-</tr>
-</tbody></table>
-<h3 id="性能"><a href="#性能" class="headerlink" title="性能"></a><strong>性能</strong></h3><p>Kafka的诞生的是处理高并发日志的，吞吐量比较高，每秒请求数达到数十万量级</p>
-<p>RabbitMQ每秒请求数则为万级别，有测试报告指出Kafka是RabbitMQ的10倍以上性能。</p>
-<h3 id="有序性"><a href="#有序性" class="headerlink" title="有序性"></a><strong>有序性</strong></h3><p>RabbitMQ理论上是全局有序性的，但是由于【发后既忘】+【自动确认】机制的原因，如果在同个队列的多个消费者做相同的业务处理时，他们的各自的执行任务无法保证有序完成。如果确保100%有序可以使用【非自动确认】，但会影响消费性能。</p>
-<p>Kafka支持分区有序性，如果对有序性有严格要求可以设置单个Partition，可是单个Partition并发性比较低，因此在多个Partition情况下可以根据业务指定key把相关的消息路由到同一个Partition，例如相同UserId行为信息可以到Partition 1进行处理。</p>
-<h3 id="Kafka为什么快"><a href="#Kafka为什么快" class="headerlink" title="Kafka为什么快"></a><strong>Kafka为什么快</strong></h3><p>关键核心技术点：</p>
-<ul>
-<li>异步批量处理</li>
-<li>磁盘顺序读写</li>
-<li>操作系统PageCache缓存数据</li>
-<li>零拷贝加速消费</li>
-</ul>
-<p>Kafka的诞生就是为了高并发日志处理的，那么在他整个机制里使用了很多批量、异步、缓存。例如生产者客户端，他会积累一定量（条数、大小）的消息，再批量的发给kafka broker，如果在这段时间客户端服务挂了，就等于消息丢失了。当broker接受到了消息后，还有一堆骚操作-异步刷盘，也就是生产者发送给broker之后他是记录在缓存的，每隔一段时间才会持久化到磁盘，假如这段真空期broker挂了，消息也是丢了。</p>
-<h2 id="优缺点对比"><a href="#优缺点对比" class="headerlink" title="优缺点对比"></a>优缺点对比</h2><table>
-<thead>
-<tr>
-<th></th>
-<th>RabbitMQ</th>
-<th>kafka</th>
-</tr>
-</thead>
-<tbody><tr>
-<td>优点</td>
-<td>1、稳定可靠，数据不会丢失。<br>2、管理界面较丰富</td>
-<td>1、这些方面表现很好：高吞吐、低延迟、高可用、集群热扩展、集群容错<br>2、producer端提供缓存、压缩功能，可节省性能，提高效率。<br>3、提供顺序消费能力<br>4、生态完善，在大数据处理方面有大量配套的设施。</td>
-</tr>
-<tr>
-<td>缺点</td>
-<td>1、在高吞吐量、高可用上较其他两者有所不如。<br><br>2. erlang 语言难度较大。基本只能依赖于开源社区的快速维护和修复bug，不利于做二次开发和维护<br>3、不支持事务<br><br>4、消息吞吐能力较差，消息堆积时，性能会明显降低</td>
-<td>1、消息容易丢失，适合做日志系统，不适合做数据系统。<br><br>2、消费集群数目受到分区数目的限制。<br>2、单机topic多时，性能会明显降低。单机超过64个队列&#x2F;分区，Load会发生明显的飙高现象，队列越多，load越高，发送消息响应时间变长<br>3、不支持事务<br><br>4、支持消息顺序，但是一台代理宕机后，就会产生消息乱序；<br><br>5、消费失败不支持重试</td>
-</tr>
-</tbody></table>
-<h2 id="如何选型"><a href="#如何选型" class="headerlink" title="如何选型"></a>如何选型</h2><p>RabbitMQ 和 Kafka 不是相互竞争的消息代理。两者都旨在支持不同使用案例中的数据交换，分别有其适用场景。下面有一些场景和选型建议：</p>
-<ol>
-<li><p><strong>事件流重放</strong></p>
-<p>Kafka 适用于需要重新分析所接收数据的应用程序。可以在保留期内多次处理流式数据或收集日志文件进行分析。</p>
-<p>使用 RabbitMQ 进行日志聚合更具挑战性，因为消息一旦使用就会被删除。解决方法是重放来自生产者的已存储消息。</p>
+                <h2 id="经典案例"><a href="#经典案例" class="headerlink" title="经典案例"></a>经典案例</h2><p>下面的代码输出的结果回事什么呢？</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> (<br>	<span class="hljs-string">&quot;fmt&quot;</span><br>)<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>	<span class="hljs-keyword">var</span> a, b <span class="hljs-type">float64</span><br>	a = <span class="hljs-number">1.01</span><br>	b = <span class="hljs-number">2.09</span><br><br>	fmt.Println(a + b)<br>&#125;<br><br></code></pre></td></tr></table></figure>
+
+<p>有算数基础的人可能都会说是3.1，但是上面的代码在我的电脑执行结果输出的结果却是:<code>3.0999999999999996</code></p>
+<p>为什么会这样子呢？这是因为浮点数的存储机制导致的。</p>
+<h2 id="浮点数的存储机制"><a href="#浮点数的存储机制" class="headerlink" title="浮点数的存储机制"></a>浮点数的存储机制</h2><h2 id="解决方案"><a href="#解决方案" class="headerlink" title="解决方案"></a>解决方案</h2><ol>
+<li><p>我们可以先把浮点数乘10的整数倍把浮点数转换成整数然后在做运算，例如1.01+2.09 我们可以先把两个数都乘100倍，相加后的结果再除以100，就可以得到我们想要的值3.1了。</p>
 </li>
-<li><p><strong>实时数据流式处理</strong></p>
-<p>Kafka 以非常低的延迟流式传输消息，适用于实时分析流式数据。例如，可以将 Kafka 用作分布式监控服务，为在线事务处理实时发出提醒。</p>
+<li><p>转成字符串类型，计算完的值转换成字符串做保存和输出，需要用时再转成对应的类型。有很多协议对浮点数就是这么处理的，例如json的number类型，其实底层就是string类型</p>
 </li>
-<li><p><strong>复杂的路由架构</strong></p>
-<p>RabbitMQ 为要求模糊或路由场景复杂的客户端提供灵活性。例如，可以将 RabbitMQ 设置为将数据路由到具有不同绑定和交换机的不同应用程序。</p>
-</li>
-<li><p><strong>有效的消息传输</strong></p>
-<p>RabbitMQ 采用推送模型，这意味着生产者知悉客户端应用程序是否使用消息。该方法适用于在交换和分析数据时必须遵守特定顺序和传输保证的应用程序。</p>
-</li>
+<li><p>用一些专门处理浮点数计算的库，例如golang的<strong>decimal</strong>包，就是用来解决float类型对象之间运算不准确的问题的。示例：</p>
+<figure class="highlight go"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs go"><span class="hljs-keyword">package</span> main<br><br><span class="hljs-keyword">import</span> (<br>    <span class="hljs-string">&quot;fmt&quot;</span><br>    <span class="hljs-string">&quot;log&quot;</span><br>    <span class="hljs-string">&quot;github.com/shopspring/decimal&quot;</span><br>)<br><br><span class="hljs-function"><span class="hljs-keyword">func</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span> &#123;<br>    <span class="hljs-keyword">var</span> v1 = decimal.NewFromFloat(<span class="hljs-number">0.1</span>)  <span class="hljs-comment">// 声明一个decimal.Decimal类型的变量v1</span><br>    <span class="hljs-keyword">var</span> v2 = decimal.NewFromFloat(<span class="hljs-number">0.2</span>)  <span class="hljs-comment">// 声明一个decimal.Decimal类型的变量v2</span><br><br>   <span class="hljs-comment">// 支持从其他数据类型中解析浮点型数据  NewFromString /  NewFromFloat32  / NewFromInt()  ...</span><br>    <br>    <span class="hljs-comment">// decimal.Decimal类型变量之间的加减乘除</span><br>    <span class="hljs-comment">// 所得到的结果也是decimal.Decimal类型</span><br>    <span class="hljs-keyword">var</span> v3 = v1.Add(v2)  <span class="hljs-comment">// 0.3</span><br>    <span class="hljs-keyword">var</span> v4 = v1.Sub(v2)  <span class="hljs-comment">// -0.1</span><br>    <span class="hljs-keyword">var</span> v5 = v1.Mul(v2)  <span class="hljs-comment">// 0.02</span><br>    <span class="hljs-keyword">var</span> v6 = v1.Div(v2)  <span class="hljs-comment">// 0.5</span><br>    <br>    <span class="hljs-comment">// 声明一个decimal.Decimal类型的对象</span><br>    <span class="hljs-keyword">var</span> v7 = decimal.NewFromFloat(<span class="hljs-number">3.4625</span>)<br>    <span class="hljs-keyword">var</span> data1 = v7.Round(<span class="hljs-number">1</span>)     <span class="hljs-comment">// 3.5，保留一位小数，四舍五入的方式</span><br>    <span class="hljs-keyword">var</span> data2 = v7.Truncate(<span class="hljs-number">1</span>)  <span class="hljs-comment">// 3.4，保留一位小数，直接舍弃，直接截断的方式</span><br><br>    log.Println(v3, v4, v5, v6)<br>    log.Println(data1, data2)<br>    <br><span class="hljs-comment">// 输出的结果是</span><br><span class="hljs-number">0.3</span> <span class="hljs-number">-0.1</span> <span class="hljs-number">0.02</span> <span class="hljs-number">0.5</span><br><span class="hljs-number">3.5</span> <span class="hljs-number">3.4</span><br><br><span class="hljs-comment">// 最后别忘了还需要转换成你所需要的数据类型</span><br>decimal.NewFromFloat(nums).Round(<span class="hljs-number">2</span>).Float64() <span class="hljs-comment">// 四舍五入保留2位小数，最后再转换为float64类型</span><br><br><span class="hljs-comment">// 转换成其他数据类型</span><br>Float64()  <span class="hljs-comment">// 浮点型</span><br>String()  <span class="hljs-comment">// 字符串</span><br></code></pre></td></tr></table></figure></li>
 </ol>
-<p><strong>另外选型也可以从前面RabbitMQ 和 Kafka 的功能对比和优缺点对比上入手，根据我们实际业务需要做选择。</strong></p>
-<h2 id="参考"><a href="#参考" class="headerlink" title="参考"></a>参考</h2><ol>
-<li><a target="_blank" rel="noopener" href="https://blog.51cto.com/knifeedge/5011115">https://blog.51cto.com/knifeedge/5011115</a></li>
-<li><a target="_blank" rel="noopener" href="https://aws.amazon.com/cn/compare/the-difference-between-rabbitmq-and-kafka/">https://aws.amazon.com/cn/compare/the-difference-between-rabbitmq-and-kafka/</a></li>
+<p>参考：</p>
+<ol>
+<li><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/467157712">https://zhuanlan.zhihu.com/p/467157712</a></li>
+<li><a target="_blank" rel="noopener" href="https://blog.51cto.com/u_11045899/7064240">https://blog.51cto.com/u_11045899/7064240</a></li>
+<li><a target="_blank" rel="noopener" href="https://juejin.cn/post/6897870218002399246">https://juejin.cn/post/6897870218002399246</a></li>
 </ol>
 
                 
@@ -466,9 +325,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/RabbitMQ/" class="print-no-link">#RabbitMQ</a>
-      
-        <a href="/tags/Kafka/" class="print-no-link">#Kafka</a>
+        <a href="/tags/%E6%B5%AE%E7%82%B9%E6%95%B0/" class="print-no-link">#浮点数</a>
       
     </div>
   
@@ -482,9 +339,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2024/01/05/RabbitMQ%E5%BF%85%E7%9F%A5%E4%BC%9A/" title="RabbitMQ必知会">
+                      <a href="/2024/01/15/MySQL%E6%9F%A5%E8%AF%A2%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%92%8C%E4%BC%98%E5%8C%96/" title="MySQL查询性能分析和优化">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">RabbitMQ必知会</span>
+                        <span class="hidden-mobile">MySQL查询性能分析和优化</span>
                         <span class="visible-mobile">上一篇</span>
                       </a>
                     
@@ -492,8 +349,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2024/01/04/%E6%B5%85%E8%B0%88RPC/" title="浅谈RPC">
-                        <span class="hidden-mobile">浅谈RPC</span>
+                      <a href="/2024/01/15/MongoDB%E6%9F%A5%E8%AF%A2%E6%80%A7%E8%83%BD%E5%88%86%E6%9E%90%E5%92%8C%E4%BC%98%E5%8C%96/" title="MongoDB查询性能分析">
+                        <span class="hidden-mobile">MongoDB查询性能分析</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
